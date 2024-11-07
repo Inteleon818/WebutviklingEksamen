@@ -48,6 +48,7 @@ header {
         justify-content: space-between;
         gap: 2rem;
         margin-top: 0;
+        margin-bottom: 3rem;
 
         i {
             font-size: 15px;
@@ -442,7 +443,7 @@ li {
 
 
 /*SMALL MOBILE*/
-@media only screen and (max-width:500px){
+@media only screen and (max-width:500px) {
     #product_grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -491,3 +492,95 @@ li {
         grid-row-end: 7;
     }
 }
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+.brodsmulesti {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    li:last-child {
+        font-weight: bold;
+    }
+}
+
+#productimages {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    img {
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+    }
+
+    #blomst1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    #blomst2 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    #blomst3 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    #blomst4 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+}
+
+#product_information {
+
+    #mrknvn {
+        text-decoration: underline;
+        color: rgb(154, 154, 154);
+    }
+
+    span {
+        font-weight: bold;
+    }
+
+    label select {
+        width: 100%;
+        border-width: 2px;
+        height: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #shopcart {
+        display: inline-block;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        width: 70vw;
+        margin-bottom: 3rem;
+    }
+
+    i {
+        display: inline-block;
+        border-style: solid;
+        padding: 0.92rem;
+        padding-bottom: 1.02rem;
+    }
+}
+
