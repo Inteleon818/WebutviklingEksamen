@@ -120,7 +120,7 @@ header {
             margin: 0;
         }
     
-        h4:first-child {
+        h4:first-child, a:first-child {
             color: rgb(255, 255, 255);
             background-color: rgb(0, 0, 0);
         }
@@ -364,19 +364,6 @@ header {
     }
 }
 
-a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-
-ul {
-    padding-left: 0;
-}
-
-li {
-    list-style: none;
-}
-
 #contact_information {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -437,59 +424,6 @@ li {
         i {
             font-size: 20px;
         }
-    }
-}
-
-
-
-/*SMALL MOBILE*/
-@media only screen and (max-width:500px) {
-    #product_grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-    
-    #product1 {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-    
-    #product2 {
-        margin-top: 0;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-    
-    #product3 {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-    
-    #product4 {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 4;
-        grid-row-end: 5;
-    }
-    
-    #product5 {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 5;
-        grid-row-end: 6;
-    }
-    
-    #product6 {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 6;
-        grid-row-end: 7;
     }
 }
 
@@ -584,3 +518,176 @@ li {
     }
 }
 
+
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+#cart {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#shopbag {
+    
+    img {
+        width: 50vw;
+    }
+}
+
+#userdata {
+
+    h2 {
+        margin-top: 3rem;
+    }
+
+    input {
+        width: 90vw;
+        border-width: 2px;
+    }
+
+    h4 {
+        text-align: center;
+        padding: 1rem;
+        width: 80vw;
+        color: rgb(255, 255, 255);
+        background-color: black;
+        margin: auto;
+        margin-top: 2rem;
+    }
+
+    a {
+        text-align: center;
+        text-decoration: underline;
+        color: rgb(31, 14, 169);
+    }
+}
+
+#deli { 
+    
+    input {
+        display: inline-block;
+        width: 10vw;
+    }
+
+    label {
+        display: inline-block;
+        width: 80vw;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        margin-top: 3rem;
+    }
+}
+
+#payment {
+
+    h2 {
+        margin-top: 3rem;
+    }
+
+    .kortbetalinginput {
+        width: 90vw;
+        border-width: 2px;
+    }
+
+    .kortbetalinglabel {
+        width: 100vw;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        margin-top: 3rem;
+    }
+
+    p, h4 {
+        text-align: center;
+    }
+
+    #kjop {
+        text-align: center;
+        padding: 1rem;
+        width: 80vw;
+        color: rgb(255, 255, 255);
+        background-color: black;
+        margin: auto;
+    }
+
+    #boks1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    #boks2 {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+
+
+/*SMALL MOBILE*/
+@media only screen and (max-width:500px) {
+    #product_grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    
+    #product1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    
+    #product2 {
+        margin-top: 0;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    
+    #product3 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    
+    #product4 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    
+    #product5 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+    
+    #product6 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+}

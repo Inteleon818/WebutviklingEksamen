@@ -36,7 +36,100 @@
         </header>
 
         <main>
-            
+            <h2 id="cart">Kasse</h2>
+            <section id="shopbag">
+                <h2>1. SHOPPINGBAGEN DIN</h2>
+                <img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst">
+                <h3>PRODUCT NAME</h3>
+                <p>2300 kr</p>
+                <p>Farge: <span>Grønn</span></p>
+
+                <img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst">
+                <h3>PRODUCT NAME</h3>
+                <p>2300 kr</p>
+                <p>Farge: <span>Grønn</span></p>
+
+                <img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst">
+                <h3>PRODUCT NAME</h3>
+                <p>2300 kr</p>
+                <p>Farge: <span>Grønn</span></p>
+            </section>
+            <section id="userdata">
+                <h2>2. DINE OPPLYSNINGER</h2>
+                <h3>Leveringsadresse</h3>
+                <form method="post" action="#">
+                    <label>
+                        Fornavn:
+                        <input type="text" pattern="[A-Za-zæøåÆØÅ ]{2,}" placeholder="Jane*" minlength="3" maxlength="30" required>
+                    </label>
+                    <label>
+                        Etternavn:
+                        <input type="text" pattern="[A-Za-zæøåÆØÅ ]{2,}" placeholder="Doe*" minlength="3" maxlength="30" required>
+                    </label>
+                    <label>
+                        Gateadresse:
+                        <input type="text" placeholder="Stenrødveien 99*" minlength="3" maxlength="50" required>
+                    </label>
+                    <label>
+                        Postnummer:
+                        <input type="number" placeholder="1234*" min="3" max="30" required>
+                    </label>
+                    <label>
+                        Poststed:
+                        <input type="text" pattern="[A-Za-zæøåÆØÅ ]{2,}" placeholder="Halden*" minlength="2" maxlength="50" required>
+                    </label>
+                    <h4>Lagre</h4>
+                    <a href="#"><p>Avbryt</p></a>
+                </form>
+            </section>
+            <section id="deli">
+                <h2>3. LEVERING</h2>
+                <h3>LEVERINGSVALG</h3>
+                <form method="post" action="#">
+                    <input type="radio" id="home" name="levering" value="Hjem" required> 
+                    <label for="home">Express Hjemlevering</label> 
+                    <input type="radio" id="delivery_place" name="levering" value="Utlevering" required> 
+                    <label for="delivery_place">Express Pakke til utleveringssted</label>
+                    <input type="radio" id="standard" name="levering" value="Standard" required> 
+                    <label for="standard">Standard Hjemlevering</label>
+                </form>
+            </section>
+            <section id="payment">
+                <h2>4. BETALING</h2>
+                <h3>BETAL MED KORT</h3>
+                <form method="post" action="#">
+                    <label class="kortbetalinglabel">
+                        Kortnummer:
+                        <input class="kortbetalinginput" type="number" placeholder="1234567890123" min="10" max="20" required>
+                    </label>
+                    <label class="kortbetalinglabel">
+                        Utløpsdato:
+                        <input class="kortbetalinginput" type="date" max="2024-12-31" required>
+                    </label>
+                    <label class="kortbetalinglabel">
+                        CVC/CVV:
+                        <input class="kortbetalinginput" type="number" placeholder="CVC/CVV" min="3" max="6" required>
+                    </label>
+                </form>
+                <p>Å betale inkl. mva.</p>
+                <h4>3000 kr</h4>
+                <h3 id="kjop">Fullfør kjøp</h3>
+                <p>Du bekrefter herved at opplysningene og dokumentene du har
+                    oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg
+                    retten til å heve eller avslutte avtaleforholdet dersom det foreligger
+                    uriktige eller ufullstendige opplysninger.</p>
+                <form>
+                    <section id="boks1">
+                        <input type="checkbox" id="vilkår" name="bekreftelse" value="bekreftelse" required> 
+                        <label for="vilkår">Ja, jeg godtar vilkårene</label>
+                    </section>
+                    <br>
+                    <section id="boks2">
+                        <input type="checkbox" id="nyhetsbrev" name="bekreftelse" value="bekreftelse" required>
+                        <label for="nyhetsbrev">Ja takk! Send nyhetsbrev til meg</label>
+                    </section>
+                </form>
+            </section>
         </main>
 
         <footer id="contact_information">
@@ -59,6 +152,7 @@
                     <li><a href="#">Produkter</a></li>
                     <li><a href="#">Kategorier</a></li>
                     <li><a href="#">Kontakt oss</a></li>
+                    <li><a href="https://hiof-my.sharepoint.com/:x:/g/personal/danielpk_hiof_no/EQgp2exlw7JMmf4SCXgXJ5gBF4OPOUM6o4IUt2bwUR2Wcw?e=LAemmA">Tilgjengelighetserklæring</a></li>
                 </ul>
             </section>
             <section id="sosiale_medier">
