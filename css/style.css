@@ -7,10 +7,16 @@ html {
     box-sizing: border-box;
 }
 
+#container {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 1rem;
 
     label {
         position: relative;
@@ -27,7 +33,7 @@ header {
             position: absolute;
             font-size: 10px;
             right: 5%;
-            bottom: 25%;
+            bottom: 20%;
         }
     
     }
@@ -59,14 +65,13 @@ header {
 #banner {
     display: flex;
     position: relative;
-    align-items: end;
     gap: 1rem;
     overflow: scroll;
 
     article {
         display: flex;
         flex-direction: column;
-        align-items: end;
+        align-items: start;
         margin-bottom: 1rem;
     
         img {
@@ -85,6 +90,7 @@ header {
             padding-right: 2rem;
             margin-left: 37vw;
             text-align: end;
+            max-width: 680px;
         }
 
         a {
@@ -110,7 +116,7 @@ header {
         justify-content: space-around;
         gap: 1rem;
     
-        h4 {
+        a {
             padding: 1rem;
             border-style: solid;
             border-color: rgb(0, 0, 0);
@@ -119,26 +125,21 @@ header {
             text-wrap: nowrap;
             margin: 0;
         }
+    }
+}
+
+.producthead {
+    display: flex;
+    gap: 4rem;
+}
+
+.review {
+    display: flex;
+    gap: 0.2rem;
     
-        h4:first-child, a:first-child {
-            color: rgb(255, 255, 255);
-            background-color: rgb(0, 0, 0);
-        }
-    }
-
-    .producthead {
-        display: flex;
-        gap: 4rem;
-    }
-
-    .review {
-        display: flex;
-        gap: 0.2rem;
-        
-        h5 {
-            margin-top: 0.1rem;
-            margin-left: 0.6rem;
-        }
+    h5 {
+        margin-top: 0.1rem;
+        margin-left: 0.6rem;
     }
 }
 
@@ -293,15 +294,19 @@ header {
 
         img {
             border-radius: 20px;
-            width: 100vw;
-            opacity: 0.2;
+            width: 100%;
+            height: 20rem;
+            border-style: solid;
+            border-color: rgba(0, 0, 0, 1);
+            border-width: 5px;
         }
     
         h3 {
+            width: 100%;
             position: absolute;
             z-index: 1;
-            top: 45%;
-            left: 53%;
+            top: 50%;
+            left: 50%;
             transform: translate(-50%, -50%);  /*https://www.w3schools.com/howto/howto_css_image_text.asp*/
         }
     }
@@ -309,8 +314,13 @@ header {
 
 #anmeldelser {
 
+    h2 {
+        text-align: center;
+    }
+
     .scroll-container {
         display: flex;
+        justify-content: start;
         gap: 1rem;
         overflow: scroll;
 
@@ -318,6 +328,7 @@ header {
 
             img {
                 width: 50vw;
+                max-width: 150px;
                 border-radius: 100%;
             }
     
@@ -330,6 +341,7 @@ header {
     
             img {
                 width: 50vw;
+                max-width: 150px;
                 border-radius: 100%;
             }
     
@@ -342,6 +354,7 @@ header {
     
             img {
                 width: 50vw;
+                max-width: 150px;
                 border-radius: 100%;
             }
     
@@ -354,6 +367,7 @@ header {
     
             img {
                 width: 50vw;
+                max-width: 150px;
                 border-radius: 100%;
             }
     
@@ -366,8 +380,8 @@ header {
 
 #contact_information {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
 
     font-size: 0.8rem;
 
@@ -377,7 +391,7 @@ header {
 
     #logo_og_ingress {
         grid-column-start: 1;
-        grid-column-end: 4;
+        grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
 
@@ -386,7 +400,7 @@ header {
 
     #kontakt {
         grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column-end: 2;
         grid-row-start: 2;
         grid-row-end: 3;
 
@@ -402,22 +416,21 @@ header {
     }
 
     #snarveier {
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
-
-        padding-left: 1rem;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
     }
 
     #sosiale_medier {
         grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 3;
-        grid-row-end: 4;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
 
         ul {
             display: flex;
+            flex-direction: column;
             gap: 1rem;
         }
 
@@ -518,6 +531,15 @@ header {
     }
 }
 
+h3 {
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
 
 
 /*-----------------------------------------------------------------------------------------------------------------------*/
@@ -530,7 +552,8 @@ header {
 #shopbag {
     
     img {
-        width: 50vw;
+        width: 100%;
+        border-radius: 20px;
     }
 }
 
@@ -541,42 +564,55 @@ header {
     }
 
     input {
-        width: 90vw;
+        width: 100%;
         border-width: 2px;
+        margin-bottom: 1rem;
+        padding: 0.6rem;
+        padding-left: 0.2rem;
     }
 
     h4 {
         text-align: center;
-        padding: 1rem;
-        width: 80vw;
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        width: 5rem;
         color: rgb(255, 255, 255);
         background-color: black;
         margin: auto;
-        margin-top: 2rem;
+        margin-top: 1rem;
+        margin-left: 0;
     }
 
     a {
-        text-align: center;
         text-decoration: underline;
         color: rgb(31, 14, 169);
     }
 }
 
-#deli { 
+#deli {
     
     input {
         display: inline-block;
-        width: 10vw;
+        width: auto;
     }
 
     label {
         display: inline-block;
-        width: 80vw;
-        margin-bottom: 1rem;
+        font-weight: bold;
     }
 
-    h2 {
-        margin-top: 3rem;
+    .price {
+        display: inline-block;
+    }
+
+    p {
+        margin-bottom: 1rem;
+        margin-left: 1.2rem;
+        font-size: 0.8rem;
+    }
+
+    i {
+        margin-left: 0.25rem;
     }
 }
 
@@ -587,8 +623,11 @@ header {
     }
 
     .kortbetalinginput {
-        width: 90vw;
+        width: 100%;
         border-width: 2px;
+        margin-bottom: 1rem;
+        padding: 0.6rem;
+        padding-left: 0.2rem;
     }
 
     .kortbetalinglabel {
@@ -596,31 +635,23 @@ header {
         margin-bottom: 1rem;
     }
 
+    .bkrbox {
+        margin-top: 1rem;
+    }
+
     h2 {
         margin-top: 3rem;
     }
 
-    p, h4 {
-        text-align: center;
-    }
-
     #kjop {
         text-align: center;
-        padding: 1rem;
-        width: 80vw;
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        width: 6rem;
         color: rgb(255, 255, 255);
         background-color: black;
         margin: auto;
-    }
-
-    #boks1 {
-        display: flex;
-        justify-content: center;
-    }
-
-    #boks2 {
-        display: flex;
-        justify-content: center;
+        margin-left: 0;
     }
 }
 
@@ -642,7 +673,8 @@ li {
 
 
 /*SMALL MOBILE*/
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:750px) {
+
     #product_grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -689,5 +721,301 @@ li {
         grid-column-end: 2;
         grid-row-start: 6;
         grid-row-end: 7;
+    }
+}
+
+
+
+/*DESKTOP*/
+@media only screen and (min-width: 750px){
+
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #banner {
+        
+        article {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+
+            img {
+                width: 98%;
+            }
+        }
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 1rem;
+        gap: 1rem;
+
+        label {
+            bottom: 1.15rem;
+        }
+
+        ul {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.7rem;
+
+            h1 {
+                position: relative;
+                bottom: 1rem;
+                font-size: 1rem;
+            }
+        }
+
+        .navul2 {
+            position: relative;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+    }
+
+    #product_grid {
+
+        img {
+            max-width: 350px;
+        }
+
+        .producthead, .review {
+            max-width: 350px;
+        }
+    }
+
+    #contact_information {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        font-size: 0.7rem;
+    
+        #logo_og_ingress {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+    
+        #kontakt {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+    
+        #snarveier {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            position: relative;
+            left: 15%;
+        }
+    
+        #sosiale_medier {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            font-size: 1rem;
+    
+            ul {
+                flex-direction: row;
+            }
+        }
+    }
+
+    #popular_categories {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+
+        article {
+            padding: 0.1rem;
+
+            img {
+                height: 10rem;
+            }
+        }
+
+        h2 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+    
+        p {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+    
+        #ctg1 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            max-width: 386px;
+
+            h3 {
+                top: 40%;
+            }
+        }
+    
+        #ctg2 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            max-width: 386px;
+
+            h3 {
+                top: 40%;
+            }
+        }
+    
+        #ctg3 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            max-width: 386px;
+
+            h3 {
+                top: 40%;
+            }
+        }
+    
+        #ctg4 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            max-width: 864px;
+
+            h3 {
+                top: 45%;
+            }
+        }
+    
+        #ctg5 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            max-width: 300px;
+            margin: 0 0 0 auto;
+
+            h3 {
+                top: 45%;
+            }
+        }
+    }
+
+    #anmeldelser {
+        
+        img {
+            max-width: 289px;
+        }
+    }
+
+    #productgrid {
+
+        .producthead, .review {
+            max-width: 440px;
+        }
+
+        #product1 {
+            margin-left: 0.5rem;
+
+            img {
+                max-width: 700px;
+            }
+        }
+
+        #product2 {
+            margin-right: 0.5rem;
+
+            img {
+                max-width: 700px;
+            }
+        }
+
+        #product3 {
+            margin-left: 0.5rem;
+
+            img {
+                max-width: 700px;
+            }
+        }
+
+        #product4 {
+            margin-right: 0.5rem;
+
+            img {
+                max-width: 700px;
+            }
+        }
+    }
+
+    #productimages {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        width: 50%;
+    
+        img {
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+        }
+    
+        #blomst1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+    
+        #blomst2 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            max-width: 160px;
+        }
+    
+        #blomst3 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            max-width: 160px;
+        }
+    
+        #blomst4 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            max-width: 160px;
+        }
+    }
+}
+
+
+
+/*BIG DESKTOP*/
+@media only screen and (min-width: 1190px){
+
+    #popular_categories {
+
+        #ctg5 {
+
+            margin-right: 0.5rem;
+        }
     }
 }
