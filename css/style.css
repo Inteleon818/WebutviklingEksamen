@@ -553,7 +553,29 @@ h3 {
     
     img {
         width: 100%;
+        height: 100%;
         border-radius: 20px;
+    }
+
+    .stor {
+        width: fit-content;
+        display: inline-block;
+        font-size: 0.8rem;
+    }
+
+    label {
+        margin-left: 1rem;
+        font-size: 0.8rem;
+    }
+
+    input, select {
+        padding: 0.8rem;
+    }
+
+    i {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        margin-right: 1rem;
     }
 }
 
@@ -590,25 +612,37 @@ h3 {
 }
 
 #deli {
+
+    .rad {
+        padding: 1rem;
+        padding-left: 0;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(107, 107, 107);
+    }
     
     input {
-        display: inline-block;
         width: auto;
+        margin-left: 1rem;
     }
 
     label {
-        display: inline-block;
         font-weight: bold;
     }
 
     .price {
-        display: inline-block;
+        margin-bottom: 0.5rem;
+        margin-left: 1.2rem;
     }
 
     p {
-        margin-bottom: 1rem;
         margin-left: 1.2rem;
+        margin-right: 1rem;
         font-size: 0.8rem;
+    }
+
+    .daylivery {
+        color: rgb(154, 154, 154);
     }
 
     i {
@@ -620,6 +654,15 @@ h3 {
 
     h2 {
         margin-top: 3rem;
+    }
+
+    p {
+        text-align: center;
+        margin: 0.5rem;
+    }
+
+    i {
+        margin-left: 0.2rem;
     }
 
     .kortbetalinginput {
@@ -635,23 +678,28 @@ h3 {
         margin-bottom: 1rem;
     }
 
-    .bkrbox {
-        margin-top: 1rem;
-    }
-
-    h2 {
-        margin-top: 3rem;
+    #totpris {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0.5rem;
     }
 
     #kjop {
         text-align: center;
-        font-size: 0.7rem;
-        padding: 0.5rem;
-        width: 6rem;
+        padding: 1rem;
+        width: 80%;
         color: rgb(255, 255, 255);
         background-color: black;
-        margin: auto;
-        margin-left: 0;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    form {
+        text-align: center;
+    }
+
+    .bkrbox {
+        margin-top: 1rem;
     }
 }
 
@@ -672,7 +720,7 @@ li {
 
 
 
-/*SMALL MOBILE*/
+/*MOBILE*/
 @media only screen and (max-width:750px) {
 
     #product_grid {
@@ -1004,6 +1052,163 @@ li {
             max-width: 160px;
         }
     }
+
+    #shopbag {
+
+        .myitems {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            margin-bottom: 3rem;
+
+            h3, p {
+                margin-top: 0;
+                margin-bottom: 0;
+                margin-left: 1rem;
+                margin-right: 0;
+                font-size: 0.8rem;
+            }
+
+            a {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+
+            .prodinfo {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+
+            form {
+                grid-column-start: 2;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+
+            .prodicons {
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                grid-column-start: 4;
+                grid-column-end: 5;
+                grid-row-start: 1;
+                grid-row-end: 2;
+
+                i {
+                    margin: 0;
+                    margin-bottom: 1rem;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    #userdata {
+
+        #custinfo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+
+            #fr {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                margin-right: 0.5rem;
+            }
+
+            #er {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+
+            #ga {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+
+            #pn {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 3;
+                grid-row-end: 4;
+                margin-right: 0.5rem;
+            }
+
+            #ps {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+
+            h4 {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 4;
+                grid-row-end: 5;
+                width: 100%;
+            }
+
+            a {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 5;
+                grid-row-end: 6;
+                text-align: center;
+            }
+        }
+    }
+
+    #deli {
+
+        .rad {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+
+            label {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+
+            .price {
+                grid-column-start: 3;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                margin: 0;
+                text-align: end;
+                margin-right: end;
+            }
+
+            .daylivery {
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+
+            .desc {
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+        }
+    }
 }
 
 
@@ -1015,7 +1220,7 @@ li {
 
         #ctg5 {
 
-            margin-right: 0.5rem;
+            margin-right: 0.2rem;
         }
     }
 }
