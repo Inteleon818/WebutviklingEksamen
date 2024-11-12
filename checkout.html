@@ -186,34 +186,36 @@
             <section id="payment">
                 <h2>4. BETALING</h2>
                 <h3>BETAL MED KORT<i class="fa-solid fa-credit-card"></i></h3>
-                <form method="post" action="#">
-                    <label class="kortbetalinglabel">
+                <form id="betalingsform" method="post" action="#">
+                    <label class="kortbetalinglabel" id="betal1">
                         Kortnummer:
                         <input class="kortbetalinginput" type="number" placeholder="342342****3435" min="10" max="20" required>
                     </label>
-                    <label class="kortbetalinglabel">
+                    <label class="kortbetalinglabel" id="betal2">
                         Utløpsdato:
                         <input class="kortbetalinginput" type="date" max="2024-12-31" required>
                     </label>
-                    <label class="kortbetalinglabel">
+                    <label class="kortbetalinglabel" id="betal3">
                         CVC/CVV:
                         <input class="kortbetalinginput" type="number" placeholder="CVC/CVV" min="3" max="6" required>
                     </label>
                 </form>
-                <p>Å betale inkl. mva.</p>
-                <p id="totpris">3000 kr</p>
-                <h3 id="kjop">Fullfør kjøp</h3>
-                <p>Du bekrefter herved at opplysningene og dokumentene du har
-                    oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg
-                    retten til å heve eller avslutte avtaleforholdet dersom det foreligger
-                    uriktige eller ufullstendige opplysninger.</p>
-                <form>
-                    <input class="bkrbox" type="checkbox" id="vilkår" name="bekreftelse" value="bekreftelse" required> 
-                    <label for="vilkår">Ja, jeg godtar vilkårene</label>
-                    <br>
-                    <input class="bkrbox" type="checkbox" id="nyhetsbrev" name="bekreftelse" value="bekreftelse" required>
-                    <label for="nyhetsbrev">Ja takk! Send nyhetsbrev til meg</label>
-                </form>
+                <section id="fullforbet">
+                    <p>Å betale inkl. mva.</p>
+                    <p id="totpris">3000 kr</p>
+                    <h3 id="kjop">Fullfør kjøp</h3>
+                    <p>Du bekrefter herved at opplysningene og dokumentene du har
+                        oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg
+                        retten til å heve eller avslutte avtaleforholdet dersom det foreligger
+                        uriktige eller ufullstendige opplysninger.</p>
+                    <form id="vilkorboks">
+                        <input class="bkrbox" type="checkbox" id="vilkår" name="bekreftelse" value="bekreftelse" required> 
+                        <label for="vilkår">Ja, jeg godtar vilkårene</label>
+                        <br>
+                        <input class="bkrbox" type="checkbox" id="nyhetsbrev" name="bekreftelse" value="bekreftelse" required>
+                        <label for="nyhetsbrev">Ja takk! Send nyhetsbrev til meg</label>
+                    </form>
+                </section>
             </section>
         </main>
 
