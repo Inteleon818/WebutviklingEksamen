@@ -36,6 +36,7 @@
         </header>
 
         <main>
+            <a id="fortogh" href="index.html"><i class="fa-solid fa-arrow-left"></i>Fortsett og handle</a>
             <h2 id="cart">Kasse</h2>
             <section id="shopbag">
                 <h2>1. SHOPPINGBAGEN DIN</h2>
@@ -144,9 +145,18 @@
                         Poststed:
                         <input type="text" pattern="[A-Za-zæøåÆØÅ ]{2,}" placeholder="Halden*" minlength="2" maxlength="50" required>
                     </label>
-                    <h4>Lagre</h4>
-                    <a href="#"><p>Avbryt</p></a>
+                    <h3>Kontaktinformasjon</h3>
+                    <label id="ep">
+                        E-post:
+                        <input type="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="John@mail.com" min="10" max="50" required>
+                    </label>
+                    <label id="tl">
+                        Telefon:
+                        <input type="tel" pattern="[0-9]{8,12}" placeholder="+47 12345678" min="8" max="16" required>
+                    </label>
                 </form>
+                    <p id="lag">Lagre</p>
+                    <a href="#"><p>Avbryt</p></a>
             </section>
             <section id="deli">
                 <h2>3. LEVERING</h2>
