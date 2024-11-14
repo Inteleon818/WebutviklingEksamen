@@ -79,6 +79,7 @@ header {
         align-items: end;
         margin-bottom: 1rem;
         width: 100%;
+        position: relative;
     
         img {
             position: absolute;
@@ -105,7 +106,26 @@ header {
             background-color: rgb(255, 255, 255);
             border-radius: 20px;
             margin-right: 2rem;
+            margin-bottom: 1rem;
             padding: 1rem;
+        }
+
+        i {
+            background-color: rgb(255, 255, 255);
+            border-radius: 100%;
+            padding: 0.2rem;
+        }
+
+        .leftarrow {
+            position: absolute;
+            top: 50%;
+            right: 96%;
+        }
+
+        .rightarrow {
+            position: absolute;
+            top: 50%;
+            left: 96%;
         }
     }
 }
@@ -536,6 +556,10 @@ header {
             margin-top: 1rem;
             margin-bottom: 1rem;
         }
+
+        span {
+            font-weight: 500;
+        }
     }
 
     #det1 {
@@ -559,14 +583,39 @@ header {
         border-bottom-style: solid;
     }
 
+    #det3 {
+
+        table {
+            font-size: 0.9rem;
+
+            thead tr th {
+                padding-right: 1rem;
+            }
+        }
+    }
+
     #det4 {
 
         h4 {
             margin-top: 0;
         }
+
+        .stars2 {
+            display: flex;
+            margin-top: 0;
+            gap: 1rem;
+        }
+
+        #det4section {
+            border-width: 2px;
+            border-color: rgb(154, 154, 154);
+            border-style: solid;
+            border-radius: 20px;
+            padding: 1rem;
+        }
     }
 
-    .summary {
+    .summaryflex {
         display: flex;
         justify-content: space-between;
     }
@@ -836,6 +885,20 @@ li {
 
 
 
+/*SMALL MOBILE*/
+@media only screen and (max-width:550px) {
+
+    #product_information {
+
+        #det3 {
+
+            table {
+                font-size: 0.6rem;
+            }
+        }
+    }
+}
+
 
 
 /*MOBILE*/
@@ -855,6 +918,16 @@ li {
 
     #betalingsform {
         margin-bottom: 1.5rem;
+    }
+
+    #banner {
+
+        article {
+
+            i {
+                display: none; /*https://www.w3schools.com/css/css_display_visibility.asp*/
+            }
+        }
     }
 }
 
@@ -1340,6 +1413,14 @@ li {
 
             #shopcart {
                 width: 82%;
+            }
+
+            #det3 {
+
+                table {
+                    font-size: 0.6rem;
+        
+                }
             }
         }
     }
