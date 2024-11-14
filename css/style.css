@@ -62,7 +62,7 @@ header {
         margin-top: 0.5rem;
 
         i {
-            font-size: 15px;
+            font-size: 20px;
         }
     }
 }
@@ -97,7 +97,7 @@ header {
             margin-top: 0;
             margin-left: 37vw;
             text-align: end;
-            max-width: 680px;
+            max-width: 720px;
         }
 
         a {
@@ -106,6 +106,34 @@ header {
             border-radius: 20px;
             margin-right: 2rem;
             padding: 1rem;
+        }
+    }
+}
+
+#popular_products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    #product_category {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 1rem;
+    
+        a {
+            padding: 1rem;
+            border-style: solid;
+            border-color: rgb(0, 0, 0);
+            border-width: 1px;
+            border-radius: 20px;
+            text-wrap: nowrap;
+            margin: 0;
         }
     }
 }
@@ -180,7 +208,7 @@ header {
 .withheart {
     position: relative;
     display: inline-block;
-    color: #fff;
+    color: rgb(255, 255, 255);
     
     i{
         position: absolute;
@@ -190,35 +218,9 @@ header {
     }
 }
 
-#popular_products {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    h2 {
-        margin-top: 3rem;
-    }
-
-    #product_category {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 1rem;
-    
-        a {
-            padding: 1rem;
-            border-style: solid;
-            border-color: rgb(0, 0, 0);
-            border-width: 1px;
-            border-radius: 20px;
-            text-wrap: nowrap;
-            margin: 0;
-        }
-    }
-}
-
 .producthead {
     display: flex;
+    justify-content: space-between;
     gap: 4rem;
 }
 
@@ -230,6 +232,11 @@ header {
         margin-top: 0.1rem;
         margin-left: 0.6rem;
     }
+}
+
+.stars {
+    display: flex;
+    margin-top: 0;
 }
 
 #popular_categories {
@@ -314,6 +321,7 @@ header {
 }
 
 #anmeldelser {
+    margin-bottom: 3rem;
 
     h2 {
         text-align: center;
@@ -327,6 +335,12 @@ header {
         overflow: scroll;
 
         .anm {
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(154, 154, 154);
+            border-radius: 20px;
+            padding: 1rem;
+
 
             img {
                 max-width: 150px;
@@ -345,6 +359,9 @@ header {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: rgb(154, 154, 154);
 
     font-size: 0.8rem;
 
@@ -357,8 +374,6 @@ header {
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
-
-        margin-top: 3rem;
     }
 
     #kontakt {
@@ -420,6 +435,8 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 0;
 
     li:last-child {
         font-weight: bold;
@@ -480,9 +497,24 @@ header {
     label select {
         width: 100%;
         border-width: 2px;
-        height: 2rem;
+        height: 3rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
+        padding-left: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    #kurvoghjerte {
+        display: flex;
+        width: 100%;
+        
+        i {
+            display: inline-block;
+            border-style: solid;
+            padding: 0.92rem;
+            padding-bottom: 1.02rem;
+            height: 100%;
+        }
     }
 
     #shopcart {
@@ -491,23 +523,78 @@ header {
         color: white;
         padding: 1rem;
         text-align: center;
-        width: 70vw;
+        width: 100%;
         margin-bottom: 3rem;
     }
 
-    i {
-        display: inline-block;
-        border-style: solid;
-        padding: 0.92rem;
-        padding-bottom: 1.02rem;
+    details {
+        padding: 1rem;
+
+        summary {
+            list-style: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    #det1 {
+        
+        ul {
+            margin-left: 2rem;
+
+            li {
+                list-style: circle;
+            }
+        }
+        
+    }
+
+    #det1, #det3 {
+        border-top: 2px;
+        border-top-color: rgb(0, 0, 0);
+        border-top-style: solid;
+        border-bottom: 2px;
+        border-bottom-color: rgb(0, 0, 0);
+        border-bottom-style: solid;
+    }
+
+    #det4 {
+
+        h4 {
+            margin-top: 0;
+        }
+    }
+
+    .summary {
+        display: flex;
+        justify-content: space-between;
     }
 }
 
-#moreproducts {
-    color: rgb(31, 14, 169);
+aside {
+    margin-bottom: 3rem;
+}
 
-    i {
-        margin-left: 0.5rem;
+#ligprod {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    h2 {
+        display: inline-block;
+        margin-bottom: 0;
+        width: 55%;
+    }
+
+    a {
+        color: rgb(31, 14, 169);
+        display: inline-block;
+        margin-top: 1.7rem;
+
+        i {
+            margin-left: 0.5rem;
+        }
     }
 }
 
@@ -526,6 +613,25 @@ h3 {
     align-items: center;
 }
 
+#product_flex_2 {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    gap: 1rem;
+
+    article {
+        
+        img {
+            max-width: 350px;
+            border-radius: 20px;
+        }
+
+        .producthead h5 {
+            margin-top: 0;
+        }
+    }
+}
+
 
 /*-----------------------------------------------------------------------------------------------------------------------*/
 
@@ -537,7 +643,7 @@ h3 {
 #shopbag {
     
     img {
-        width: 50%;
+        width: 60vw;
         height: 100%;
         border-radius: 20px;
     }
@@ -649,6 +755,7 @@ h3 {
 }
 
 #payment {
+    margin-bottom: 3rem;
 
     h2 {
         margin-top: 3rem;
@@ -686,6 +793,7 @@ h3 {
         border-width: 3px;
         border-style: solid;
         padding: 1rem;
+        padding-bottom: 4rem;
     }
 
     #totpris {
@@ -732,6 +840,18 @@ li {
 
 /*MOBILE*/
 @media only screen and (max-width:1000px) {
+
+    header input {
+        width: 30vw;
+    }
+
+    #fortogh {
+        font-size: 1rem;
+    }
+
+    .prodicons {
+        margin-top: 2rem;
+    }
 
     #betalingsform {
         margin-bottom: 1.5rem;
@@ -1149,47 +1269,83 @@ li {
         margin-left: 1rem;
     }
 
-    #productimages {
-        grid-template-columns: 1fr 1fr 1fr;
+    #productsite {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
-        width: 50%;
-    
-        img {
-            width: 100%;
-            height: 100%;
-            padding: 1rem;
-        }
-    
-        #blomst1 {
+
+        #brodnav {
             grid-column-start: 1;
-            grid-column-end: 4;
+            grid-column-end: 5;
             grid-row-start: 1;
-            grid-row-end: 4;
+            grid-row-end: 2;
         }
-    
-        #blomst2 {
+
+        #productimages {
             grid-column-start: 1;
-            grid-column-end: 2;
-            grid-row-start: 4;
-            grid-row-end: 5;
-            max-width: 160px;
-        }
-    
-        #blomst3 {
-            grid-column-start: 2;
             grid-column-end: 3;
-            grid-row-start: 4;
-            grid-row-end: 5;
-            max-width: 160px;
+            grid-row-start: 2;
+            grid-row-end: 3;
+
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+        
+            img {
+                width: 100%;
+                height: 100%;
+                padding: 1rem;
+            }
+        
+            #blomst1 {
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 4;
+            }
+        
+            #blomst2 {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 4;
+                grid-row-end: 5;
+                max-width: 160px;
+            }
+        
+            #blomst3 {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 4;
+                grid-row-end: 5;
+                max-width: 160px;
+            }
+        
+            #blomst4 {
+                grid-column-start: 3;
+                grid-column-end: 4;
+                grid-row-start: 4;
+                grid-row-end: 5;
+                max-width: 160px;
+            }
         }
-    
-        #blomst4 {
+
+        #product_information {
             grid-column-start: 3;
-            grid-column-end: 4;
-            grid-row-start: 4;
-            grid-row-end: 5;
-            max-width: 160px;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 4;
+
+            label select {
+                width: 100%;
+            }
+
+            #shopcart {
+                width: 82%;
+            }
         }
+    }
+
+    #ligprod {
+        margin-top: 2rem;
     }
 
     #shopbag {
@@ -1220,6 +1376,7 @@ li {
             }
 
             .prodinfo {
+                margin-top: 1rem;
                 grid-column-start: 2;
                 grid-column-end: 3;
                 grid-row-start: 1;
@@ -1227,6 +1384,7 @@ li {
             }
 
             form {
+                margin-top: 1rem;
                 grid-column-start: 2;
                 grid-column-end: 4;
                 grid-row-start: 2;
@@ -1236,7 +1394,7 @@ li {
             .prodicons {
                 display: flex;
                 flex-direction: column;
-                align-items: end;
+                margin-top: 1rem;
                 grid-column-start: 4;
                 grid-column-end: 5;
                 grid-row-start: 1;
@@ -1246,7 +1404,6 @@ li {
                     margin: 0;
                     margin-bottom: 1rem;
                     width: 100%;
-                    text-align: start;
                 }
             }
         }
@@ -1412,13 +1569,6 @@ li {
 
 /*BIG DESKTOP*/
 @media only screen and (min-width: 1150px){
-
-    #banner {
-
-        img {
-            max-width: 1130px;
-        }
-    }
 
     #popular_categories {
 

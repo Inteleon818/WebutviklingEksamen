@@ -35,8 +35,8 @@
             </nav>
         </header>
 
-        <main>
-            <nav>
+        <main id="productsite">
+            <nav id="brodnav">
                 <ul class="brodsmulesti">
                     <li><a href="index.html">Hjem</a></li>
                     <li><i class="fa-solid fa-arrow-right"></i></li>
@@ -70,92 +70,244 @@
                     </select>
                 </label>
 
-                <a id="shopcart" href="checkout.html">Legg i handlekurv</a>
-                <i class="fa-solid fa-heart"></i>
+                <section id="kurvoghjerte">
+                    <a id="shopcart" href="checkout.html">Legg i handlekurv</a>
+                    <i class="fa-solid fa-heart"></i>
+                </section>
+
+                <details id="det1">
+                    <summary class="summary">
+                        Materiale og Vedlikehold
+                        <i class="fa-solid fa-plus"></i>
+                    </summary>
+                    <ul>
+                        <li>Overmateriale: 95% Viskose, 5% Elastan</li>
+                        <li>Materiale emner: 100% Polyester</li>
+                        <li>Materiale: Jersey</li>
+                    </ul>
+                </details>
+
+                <details id="det2">
+                    <summary class="summary">
+                        Produktdetaljer
+                        <i class="fa-solid fa-plus"></i>
+                    </summary>
+                    <p>Porygon-Z er en normal type Pokemon introdusert i generasjon 4. Den utvikler fra Porygon2 når den byttes med en annen spiller mens den holder en dubious disc. Porygon2 utvikler fra Porygon når den byttes med en annen spiller mens den holder en upgrade.</p>
+                </details>
+
+                <details id="det3">
+                    <summary class="summary">
+                        Størrelsestabell
+                        <i class="fa-solid fa-plus"></i>
+                    </summary>
+                    <p>Sjekk hvordan størrelser konverterer til andre størrelser i størrelsesguiden. &quot;Størrelser varierer i forhold til merke og modell&quot;</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>EU</th>
+                                <th>INT</th>
+                                <th>BRYSTVIDDE</th>
+                                <th>LIVVIDDE</th>
+                                <th>HOFTEMÅL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>32</td>
+                                <td>XXS</td>
+                                <td>76</td>
+                                <td>63</td>
+                                <td>85</td>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td>XS</td>
+                                <td>80</td>
+                                <td>66</td>
+                                <td>89</td>
+                            </tr>
+                            <tr>
+                                <td>36</td>
+                                <td>S</td>
+                                <td>84</td>
+                                <td>69</td>
+                                <td>93</td>
+                            </tr>
+                            <tr>
+                                <td>38</td>
+                                <td>M</td>
+                                <td>88</td>
+                                <td>72</td>
+                                <td>97</td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>L</td>
+                                <td>92</td>
+                                <td>76</td>
+                                <td>100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+
+                <details id="det4">
+                    <summary class="summary">
+                        Anmeldelser
+                        <ul class="stars">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                            <li>32</li>
+                        </ul>
+                    </summary>
+                    <h4>Rober Labrador</h4>
+                    <p>2024-10-02</p>
+                    <ul class="stars">
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                </details>
             </section>
         </main>
 
         <aside>
-            <h2>Lignende produkter</h2>
-            <a id="moreproducts" href="index.html#popular_products">Se flere lignende produkter<i class="fa-solid fa-arrow-right"></i></a>
-            <section id="product_flex">
-                <section id="product_grid">
-                    <article id="product1">
-                        <section class="withheart">
-                            <i class="fa-solid fa-heart"></i>
-                            <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
-                        </section>
-                        <section class="producthead">
-                            <h5>Product name</h5>
-                            <h5>Kr 1999</h5>
-                        </section>
-                        <section class="review">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <h5>842 reviews</h5>
-                        </section>
-                    </article>
+            <section id="ligprod">
+                <h2>Lignende produkter</h2>
+                <a id="moreproducts" href="index.html#popular_products">Se flere lignende produkter<i class="fa-solid fa-arrow-right"></i></a>
+            </section>
+            <section id="product_flex_2">
+                <article>
+                    <section class="withheart">
+                        <i class="fa-solid fa-heart"></i>
+                        <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
+                    </section>
+                    <section class="producthead">
+                        <h5>Product name</h5>
+                        <h5>Kr 1999</h5>
+                    </section>
+                    <section class="review">
+                        <ul class="stars">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ul>
+                        <h5>842 reviews</h5>
+                    </section>
+                </article>
 
-                    <article id="product2">
-                        <section class="withheart">
-                            <i class="fa-solid fa-heart"></i>
-                            <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
-                        </section>
-                        <section class="producthead">
-                            <h5>Product name</h5>
-                            <h5>Kr 1999</h5>
-                        </section>
-                        <section class="review">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <h5>842 reviews</h5>
-                        </section>
-                    </article>
+                <article>
+                    <section class="withheart">
+                        <i class="fa-solid fa-heart"></i>
+                        <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
+                    </section>
+                    <section class="producthead">
+                        <h5>Product name</h5>
+                        <h5>Kr 1999</h5>
+                    </section>
+                    <section class="review">
+                        <ul class="stars">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ul>
+                        <h5>842 reviews</h5>
+                    </section>
+                </article>
 
-                    <article id="product3">
-                        <section class="withheart">
-                            <i class="fa-solid fa-heart"></i>
-                            <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
-                            </section>
-                        <section class="producthead">
-                            <h5>Product name</h5>
-                            <h5>Kr 1999</h5>
+                <article>
+                    <section class="withheart">
+                        <i class="fa-solid fa-heart"></i>
+                        <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
-                        <section class="review">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <h5>842 reviews</h5>
-                        </section>
-                    </article>
+                    <section class="producthead">
+                        <h5>Product name</h5>
+                        <h5>Kr 1999</h5>
+                    </section>
+                    <section class="review">
+                        <ul class="stars">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ul>
+                        <h5>842 reviews</h5>
+                    </section>
+                </article>
 
-                    <article id="product4">
-                        <section class="withheart">
-                            <i class="fa-solid fa-heart"></i>
-                            <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
-                            </section>
-                        <section class="producthead">
-                            <h5>Product name</h5>
-                            <h5>Kr 1999</h5>
+                <article>
+                    <section class="withheart">
+                        <i class="fa-solid fa-heart"></i>
+                        <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
-                        <section class="review">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <h5>842 reviews</h5>
+                    <section class="producthead">
+                        <h5>Product name</h5>
+                        <h5>Kr 1999</h5>
+                    </section>
+                    <section class="review">
+                        <ul class="stars">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ul>
+                        <h5>842 reviews</h5>
+                    </section>
+                </article>
+
+                <article>
+                    <section class="withheart">
+                        <i class="fa-solid fa-heart"></i>
+                        <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
-                    </article>
-                <section>
+                    <section class="producthead">
+                        <h5>Product name</h5>
+                        <h5>Kr 1999</h5>
+                    </section>
+                    <section class="review">
+                        <ul class="stars">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ul>
+                        <h5>842 reviews</h5>
+                    </section>
+                </article>
+
+                <article>
+                    <section class="withheart">
+                        <i class="fa-solid fa-heart"></i>
+                        <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
+                        </section>
+                    <section class="producthead">
+                        <h5>Product name</h5>
+                        <h5>Kr 1999</h5>
+                    </section>
+                    <section class="review">
+                        <ul class="stars">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ul>
+                        <h5>842 reviews</h5>
+                    </section>
+                </article>
             </section>
         </aside>
 
