@@ -241,7 +241,8 @@ header {
 .producthead {
     display: flex;
     justify-content: space-between;
-    gap: 4rem;
+    gap: 1rem;
+    font-weight: bold;
 }
 
 .review {
@@ -1260,10 +1261,33 @@ li {
         }
     }
 
+    #popular_products {
+
+        #product_category {
+
+            a:hover {
+
+                background-color: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
+            }
+        }
+    }
+
     #product_grid {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
         font-size: 0.7rem;
+
+        .producthead, .review {
+            max-width: 440px;
+        }
+
+        .fa-heart:hover {
+            color: rgb(192, 51, 51);
+            font-size: 150%;
+            top: 8%;
+            right: 7%;
+        }
     }
     
     #product1 {
@@ -1271,6 +1295,11 @@ li {
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
+        margin-left: 0.5rem;
+
+            img {
+                max-width: 700px;
+            }
     }
     
     #product2 {
@@ -1278,6 +1307,11 @@ li {
         grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 2;
+        margin-left: 0.5rem;
+
+            img {
+                max-width: 700px;
+            }
     }
     
     #product3 {
@@ -1286,6 +1320,11 @@ li {
         grid-row-start: 1;
         grid-row-end: 2;
         margin-top: 1rem;
+        margin-left: 0.5rem;
+
+            img {
+                max-width: 700px;
+            }
     }
     
     #product4 {
@@ -1293,6 +1332,11 @@ li {
         grid-column-end: 2;
         grid-row-start: 2;
         grid-row-end: 3;
+        margin-left: 0.5rem;
+
+            img {
+                max-width: 700px;
+            }
     }
     
     #product5 {
@@ -1300,6 +1344,11 @@ li {
         grid-column-end: 3;
         grid-row-start: 2;
         grid-row-end: 3;
+        margin-left: 0.5rem;
+
+            img {
+                max-width: 700px;
+            }
     }
     
     #product6 {
@@ -1307,6 +1356,11 @@ li {
         grid-column-end: 4;
         grid-row-start: 2;
         grid-row-end: 3;
+        margin-left: 0.5rem;
+
+            img {
+                max-width: 700px;
+            }
     }
 
     #popular_categories {
@@ -1405,45 +1459,6 @@ li {
         }
     }
 
-    #productgrid {
-
-        .producthead, .review {
-            max-width: 440px;
-        }
-
-        #product1 {
-            margin-left: 0.5rem;
-
-            img {
-                max-width: 700px;
-            }
-        }
-
-        #product2 {
-            margin-right: 0.5rem;
-
-            img {
-                max-width: 700px;
-            }
-        }
-
-        #product3 {
-            margin-left: 0.5rem;
-
-            img {
-                max-width: 700px;
-            }
-        }
-
-        #product4 {
-            margin-right: 0.5rem;
-
-            img {
-                max-width: 700px;
-            }
-        }
-    }
-
     #fortogh {
         margin-left: 1rem;
     }
@@ -1517,16 +1532,25 @@ li {
             overflow: scroll;
             max-height: 1150px;
 
-            label select {
-                width: 100%;
+            label select:hover {
+                border-width: 4px;
             }
 
             i {
                 height: 51%;
             }
 
-            #shopcart {
-                width: 82%;
+            #kurvoghjerte {
+
+                .fa-heart:hover {
+                    color: rgb(192, 51, 51);
+                    background-color: rgb(235, 191, 191);
+                    font-size: 110%;
+                }
+
+                #shopcart:hover {
+                    opacity: 0.5;
+                }
             }
 
             #det3 {
@@ -1565,6 +1589,16 @@ li {
         }
     }
 
+    aside {
+
+        .fa-heart:hover {
+            color: rgb(192, 51, 51);
+            font-size: 100%;
+            top: 8%;
+            right: 7%;
+        }
+    }
+
     #ligprod {
         margin-top: 2rem;
     }
@@ -1577,11 +1611,17 @@ li {
             grid-template-rows: 1fr 1fr;
             margin-bottom: 3rem;
 
+            .fa-heart:hover {
+                color: rgb(192, 51, 51);
+                top: 8%;
+                right: 7%;
+            }
+
             img {
                 width: 100%;
             }
 
-            h3, p {
+            a, p {
                 margin-top: 0;
                 margin-bottom: 0;
                 margin-left: 1rem;
@@ -1787,6 +1827,21 @@ li {
                 width: 100%;
             }
         }
+    }
+
+    a:hover {
+        color: rgb(192, 51, 51);
+        text-decoration: underline;
+
+        i:hover, .fa-solid:hover {
+            color: rgb(192, 51, 51);
+            font-size: 30px;
+        }
+    }
+
+    select:hover, input:hover {
+        background-color: rgb(219, 216, 241);
+        border-width: 3px;
     }
 
     .skip {
