@@ -9,7 +9,7 @@ html {
 
 #container {
     margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-right: 0.5rem;  
 }
 
 header {
@@ -167,7 +167,7 @@ header {
         width: 95%;
     
         .producthead, .review {
-            max-width: 90%;
+            max-width: 93%;
         }
 
         img {
@@ -361,6 +361,10 @@ header {
             border-radius: 20px;
             padding: 1rem;
 
+            .dogtitle {
+                font-weight: bold;
+                font-size: 1rem;
+            }
 
             img {
                 max-width: 150px;
@@ -382,6 +386,7 @@ header {
     border-top-style: solid;
     border-top-width: 2px;
     border-top-color: rgb(154, 154, 154);
+    position: relative;
 
     font-size: 0.8rem;
 
@@ -596,14 +601,36 @@ header {
 
     #det4 {
 
-        h4 {
-            margin-top: 0;
-        }
+        summary {
+            position: relative;
 
-        .stars2 {
-            display: flex;
-            margin-top: 0;
-            gap: 1rem;
+            i {
+                position: absolute;
+            }
+
+            #star1 {
+                left:70%;
+            }
+
+            #star2 {
+                left:75%;
+            }
+
+            #star3 {
+                left:80%;
+            }
+
+            #star4 {
+                left:85%;
+            }
+
+            #star5 {
+                left:90%;
+            }
+
+            span {
+                font-family: Arial, Helvetica, sans-serif;
+            }
         }
 
         #det4section {
@@ -612,6 +639,16 @@ header {
             border-style: solid;
             border-radius: 20px;
             padding: 1rem;
+        }
+
+        h4 {
+            margin-top: 0;
+        }
+
+        .stars2 {
+            display: flex;
+            margin-top: 0;
+            gap: 1rem;
         }
     }
 
@@ -701,6 +738,7 @@ h3 {
         width: fit-content;
         display: inline-block;
         font-size: 0.8rem;
+        margin-left: 0;
     }
 
     label {
@@ -883,6 +921,48 @@ li {
     list-style: none;
 }
 
+.skip {
+ 
+    ul {
+        list-style: none;
+
+        li {
+
+            a {
+                position: absolute;
+                left: -9999px;
+
+                &:focus {
+                    position: static;
+                    left: auto;
+                    margin: 1rem;
+                    padding: 0.5rem 1rem;
+                    background-color: #000;
+                    color: #fff;
+                    border-radius: 4px;
+                    z-index: 1000;
+                    text-decoration: none;
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+}
+
+#skiptop {
+    position: absolute;
+    top: 89%;
+    left: 75%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+*:focus {
+    outline-color: rgb(255, 165, 0); /*https://www.w3.org/TR/2007/WD-WCAG20-TECHS-20071211/C16.html*/
+}
+
 
 
 /*SMALL MOBILE*/
@@ -894,6 +974,32 @@ li {
 
             table {
                 font-size: 0.6rem;
+            }
+        }
+
+        #det4 {
+
+            summary {
+
+                #star1 {
+                    left: 55%;
+                }
+
+                #star2 {
+                    left: 63%;
+                }
+
+                #star3 {
+                    left: 71%;
+                }
+
+                #star4 {
+                    left: 79%;
+                }
+
+                #star5 {
+                    left: 87%;
+                }
             }
         }
     }
@@ -1358,7 +1464,7 @@ li {
             grid-column-start: 1;
             grid-column-end: 3;
             grid-row-start: 2;
-            grid-row-end: 3;
+            grid-row-end: 4;
 
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: auto;
@@ -1406,9 +1512,17 @@ li {
             grid-column-end: 5;
             grid-row-start: 2;
             grid-row-end: 4;
+            display: flex;
+            flex-direction: column;
+            overflow: scroll;
+            max-height: 1150px;
 
             label select {
                 width: 100%;
+            }
+
+            i {
+                height: 51%;
             }
 
             #shopcart {
@@ -1420,6 +1534,32 @@ li {
                 table {
                     font-size: 0.6rem;
         
+                }
+            }
+
+            #det4 {
+
+                summary {
+
+                    #star1 {
+                        left: 58%;
+                    }
+
+                    #star2 {
+                        left: 65%;
+                    }
+
+                    #star3 {
+                        left: 72%;
+                    }
+
+                    #star4 {
+                        left: 79%;
+                    }
+
+                    #star5 {
+                        left: 86%;
+                    }
                 }
             }
         }
@@ -1447,6 +1587,10 @@ li {
                 margin-left: 1rem;
                 margin-right: 0;
                 font-size: 0.8rem;
+            }
+
+            .stor {
+                margin-left: 1rem;
             }
 
             a {
@@ -1643,6 +1787,12 @@ li {
                 width: 100%;
             }
         }
+    }
+
+    .skip {
+        position: absolute;
+        top: 13%;
+        left: 0;
     }
 }
 

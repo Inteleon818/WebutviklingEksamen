@@ -13,6 +13,11 @@
 <body>
     <div id="container">
         <header>
+            <nav class="skip">
+                <ul>
+                    <li><a tabindex="1" href="#productsite">Hopp til hovedinnholdet</a></li>
+                </ul>
+            </nav>
             <label>
                 <input type="search" placeholder="Søk etter noe fint">
                 <i class="fa-solid fa-magnifying-glass magglass"></i>
@@ -35,7 +40,7 @@
             </nav>
         </header>
 
-        <main id="productsite">
+        <main id="productsite" itemscope itemtype="https://schema.org/Product">
             <nav id="brodnav">
                 <ul class="brodsmulesti">
                     <li><a href="index.html">Hjem</a></li>
@@ -47,26 +52,26 @@
             </nav>
 
             <article id="productimages">
-                <img src="img/flower.jpg" id="blomst1" alt="Hvit blomst med marihøne som klatrer på den"> <!--Image by <a href="https://pixabay.com/users/pat_photographies-298457/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7696955">Pat</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7696955">Pixabay</a>-->
-                <img src="img/flower.jpg" id="blomst2" alt="Hvit blomst med marihøne som klatrer på den"> <!--Image by <a href="https://pixabay.com/users/pat_photographies-298457/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7696955">Pat</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7696955">Pixabay</a>-->
-                <img src="img/flower.jpg" id="blomst3" alt="Hvit blomst med marihøne som klatrer på den"> <!--Image by <a href="https://pixabay.com/users/pat_photographies-298457/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7696955">Pat</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7696955">Pixabay</a>-->
-                <img src="img/flower.jpg" id="blomst4" alt="Hvit blomst med marihøne som klatrer på den"> <!--Image by <a href="https://pixabay.com/users/pat_photographies-298457/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7696955">Pat</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7696955">Pixabay</a>-->
+                <img itemprop="image" src="img/flower.jpg" id="blomst1" alt="Hvit blomst med marihøne som klatrer på den"> <!--Image by <a href="https://pixabay.com/users/pat_photographies-298457/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7696955">Pat</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7696955">Pixabay</a>-->
+                <img itemprop="image" src="img/flower.jpg" id="blomst2" alt="Hvit blomst med marihøne som klatrer på den"> <!--Image by <a href="https://pixabay.com/users/pat_photographies-298457/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7696955">Pat</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7696955">Pixabay</a>-->
+                <img itemprop="image" src="img/flower.jpg" id="blomst3" alt="Hvit blomst med marihøne som klatrer på den"> <!--Image by <a href="https://pixabay.com/users/pat_photographies-298457/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7696955">Pat</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7696955">Pixabay</a>-->
+                <img itemprop="image" src="img/flower.jpg" id="blomst4" alt="Hvit blomst med marihøne som klatrer på den"> <!--Image by <a href="https://pixabay.com/users/pat_photographies-298457/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7696955">Pat</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7696955">Pixabay</a>-->
             </article>
 
             <section id="product_information">
-                <h2>Produktnavn</h2>
+                <h2 itemprop="name">Produktnavn</h2>
                 <a id="mrknvn" href="https://www.nike.com/se/en/?cp=33572636318_search_&Macro=-nike-g-10493864125-107873970407-e-c-EN-pure-452246974550-kwd-11642601-9216713&ds_rl=1252249&gad_source=1&gclid=Cj0KCQiA57G5BhDUARIsACgCYnx0dTwUUP10vBAvbj9wgrNvCmXBniDpywH0rDzG9nD8faDJsRULzjUaAnL3EALw_wcB&gclsrc=aw.ds">MERKENAVN</a>
-                <p>5195kr inkl. mva.</p>
-                <p>Farge: <span>Marineblå</span></p>
+                <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="price">5195</span><span itemprop="priceCurrency">NOK</span> inkl. mva.</p>
+                <p>Farge: <span itemprop="color">Marineblå</span></p>
 
                 <label>
                     <select>
                         <option selected disabled hidden>Velg størrlse</option> <!--https://stackoverflow.com/questions/9447134/default-text-which-wont-be-shown-in-drop-down-list-->
-                        <option value="xs">XS</option>
-                        <option value="s">S</option>
-                        <option value="m">M</option> <!--https://www.w3schools.com/tags/tag_select.asp-->
-                        <option value="l">L</option>
-                        <option value="xl">XL</option>
+                        <option itemprop="size" value="xs">XS</option>
+                        <option itemprop="size" value="s">S</option>
+                        <option itemprop="size" value="m">M</option> <!--https://www.w3schools.com/tags/tag_select.asp-->
+                        <option itemprop="size" value="l">L</option>
+                        <option itemprop="size" value="xl">XL</option>
                     </select>
                 </label>
 
@@ -92,7 +97,7 @@
                         Produktdetaljer
                         <i class="fa-solid fa-plus"></i>
                     </summary>
-                    <p>Porygon-Z er en normal type Pokemon introdusert i generasjon 4. Den utvikler fra Porygon2 når den byttes med en annen spiller mens den holder en <span lang="en">dubious disc</span>. Porygon2 utvikler fra Porygon når den byttes med en annen spiller mens den holder en <span lang="en">upgrade</span>.</p>
+                    <p itemprop="description">Porygon-Z er en normal type Pokemon introdusert i generasjon 4. Den utvikler fra Porygon2 når den byttes med en annen spiller mens den holder en <span lang="en">dubious disc</span>. Porygon2 utvikler fra Porygon når den byttes med en annen spiller mens den holder en <span lang="en">upgrade</span>.</p>
                 </details>
 
                 <details id="det3">
@@ -152,28 +157,26 @@
                 </details>
 
                 <details id="det4">
-                    <summary class="summaryflex">
+                    <summary>
                         Anmeldelser
-                        <ul class="stars">
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-regular fa-star"></i></li>
-                            <li>32</li>
-                        </ul>
+                        <i id="star1" class="fa-solid fa-star"></i>
+                        <i id="star2" class="fa-solid fa-star"></i>
+                        <i id="star3" class="fa-solid fa-star"></i>
+                        <i id="star4" class="fa-solid fa-star"></i>
+                        <i id="star5" class="fa-regular fa-star"><span>32</span></i>
                     </summary>
-                    <section id="det4section">
-                        <h4>Rober Labrador</h4>
-                        <p>2024-10-02</p>
-                        <ul class="stars2">
+                    <section id="det4section" itemprop="review" itemscope itemtype="https://schema.org/Review">
+                        <h4 itemprop="author">Rober Labrador</h4>
+                        <p itemprop="dateCreated">2024-10-02</p>
+                        <ul class="stars2" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-regular fa-star"></i></li>
                             <li><i class="fa-regular fa-star"></i></li>
+                            <li itemprop="ratingValue">3</li>
                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                        <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                     </section>
                 </details>
             </section>
@@ -345,6 +348,7 @@
                     <li><a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a></li>
                 </ul>
             </section>
+            <a id="skiptop" href="#container">Hopp til toppen</a>
         </footer>
     </div>   
 </body>

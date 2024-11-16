@@ -13,6 +13,11 @@
 <body>
     <div id="container">
         <header>
+            <nav class="skip">
+                <ul>
+                    <li><a tabindex="1" href="#shopbag">Hopp til hovedinnholdet</a></li>
+                </ul>
+            </nav>
             <label>
                 <input type="search" placeholder="Søk etter noe fint">
                 <i class="fa-solid fa-magnifying-glass magglass"></i>
@@ -47,9 +52,9 @@
                         <p>2300 kr</p>
                         <p>Farge: <span>Grønn</span></p>
                     </section>
-                    <form>
-                        <p class="stor">Størrelse:</p>
-                        <select>
+                    <form method="post" action="#">
+                        <label for="size1" class="stor">Størrelse:</label>
+                        <select id="size1" name="size1">
                             <option value="xs">XS</option> <!--https://stackoverflow.com/questions/9447134/default-text-which-wont-be-shown-in-drop-down-list-->
                             <option value="s">S</option>
                             <option value="m">M</option> <!--https://www.w3schools.com/tags/tag_select.asp-->
@@ -58,7 +63,7 @@
                         </select>
                         <label>
                             Antall:
-                            <input class="amofproc" type="number" value="1" min="1" max="10" required>
+                            <input class="amofproc" type="number" value="1" min="1" max="10" name="amount" required>
                         </label>
                     </form>
                     <section class="prodicons">
@@ -74,9 +79,9 @@
                         <p>2300 kr</p>
                         <p>Farge: <span>Grønn</span></p>
                     </section>
-                    <form>
-                        <p class="stor">Størrelse:</p>
-                        <select>
+                    <form method="post" action="#">
+                        <label for="size2" class="stor">Størrelse:</label>
+                        <select id="size2" name="size2">
                             <option value="xs">XS</option> <!--https://stackoverflow.com/questions/9447134/default-text-which-wont-be-shown-in-drop-down-list-->
                             <option value="s">S</option>
                             <option value="m">M</option> <!--https://www.w3schools.com/tags/tag_select.asp-->
@@ -85,7 +90,7 @@
                         </select>
                         <label>
                             Antall:
-                            <input class="amofproc" type="number" value="1" min="1" max="10" required>
+                            <input class="amofproc" type="number" value="1" min="1" max="10" name="amount" required>
                         </label>
                     </form>
                     <section class="prodicons">
@@ -101,9 +106,9 @@
                         <p>2300 kr</p>
                         <p>Farge: <span>Grønn</span></p>
                     </section>
-                    <form>
-                        <p class="stor">Størrelse:</p>
-                        <select>
+                    <form method="post" action="#">
+                        <label for="size3" class="stor">Størrelse:</label>
+                        <select id="size3" name="size3">
                             <option value="xs">XS</option> <!--https://stackoverflow.com/questions/9447134/default-text-which-wont-be-shown-in-drop-down-list-->
                             <option value="s">S</option>
                             <option value="m">M</option> <!--https://www.w3schools.com/tags/tag_select.asp-->
@@ -112,7 +117,7 @@
                         </select>
                         <label>
                             Antall:
-                            <input class="amofproc" type="number" value="1" min="1" max="10" required>
+                            <input class="amofproc" type="number" value="1" min="1" max="10" name="amount" required>
                         </label>
                     </form>
                     <section class="prodicons">
@@ -127,32 +132,32 @@
                 <form id="custinfo" method="post" action="#">
                     <label id="fr">
                         Fornavn:
-                        <input type="text" pattern="[A-Za-zæøåÆØÅ ]{2,}" placeholder="Jane*" minlength="3" maxlength="30" required>
+                        <input type="text" pattern="[A-Za-zæøåÆØÅ ]{2,}" placeholder="Jane*" minlength="3" maxlength="30" name="fname" required>
                     </label>
                     <label id="er">
                         Etternavn:
-                        <input type="text" pattern="[A-Za-zæøåÆØÅ ]{2,}" placeholder="Doe*" minlength="3" maxlength="30" required>
+                        <input type="text" pattern="[A-Za-zæøåÆØÅ ]{2,}" placeholder="Doe*" minlength="3" maxlength="30" name="ename" required>
                     </label>
                     <label id="ga">
                         Gateadresse:
-                        <input type="text" placeholder="Stenrødveien 99*" minlength="3" maxlength="50" required>
+                        <input type="text" pattern=".{2,}" placeholder="Stenrødveien 99*" minlength="3" maxlength="50" name="street" required>
                     </label>
                     <label id="pn">
                         Postnummer:
-                        <input type="number" placeholder="1234*" min="3" max="30" required>
+                        <input type="text" pattern="[0-9]{8,12}" placeholder="1234*" minlength="3" maxlength="30" name="postnumber">
                     </label>
                     <label id="ps">
                         Poststed:
-                        <input type="text" pattern="[A-Za-zæøåÆØÅ ]{2,}" placeholder="Halden*" minlength="2" maxlength="50" required>
+                        <input type="text" pattern="[A-Za-zæøåÆØÅ ]{2,}" placeholder="Halden*" minlength="2" maxlength="50" name="postarea" required>
                     </label>
                     <h3>Kontaktinformasjon</h3>
                     <label id="ep">
                         E-post:
-                        <input type="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="John@mail.com" minlength="10" maxlength="50" required>
+                        <input type="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="John@mail.com" minlength="10" maxlength="50" name="email" required>
                     </label>
                     <label id="tl">
                         Telefon:
-                        <input type="tel" pattern="[0-9]{8,12}" placeholder="+47 12345678" minlength="8" maxlength="16" required>
+                        <input type="tel" pattern="[0-9]{8,12}" placeholder="+47 12345678" minlength="8" maxlength="16" name="phonenumber" required>
                     </label>
                 </form>
                     <p id="lag">Lagre</p>
@@ -199,15 +204,15 @@
                 <form id="betalingsform" method="post" action="#">
                     <label class="kortbetalinglabel" id="betal1">
                         Kortnummer:
-                        <input class="kortbetalinginput" type="number" placeholder="342342****3435" min="10" max="20" required>
+                        <input class="kortbetalinginput" type="text" pattern="[0-9]{12,20}" placeholder="342342****3435" minlength="12" maxlength="20" name="cardnumber" required>
                     </label>
                     <label class="kortbetalinglabel" id="betal2">
                         Utløpsdato:
-                        <input class="kortbetalinginput" type="date" max="2024-12-31" required>
+                        <input class="kortbetalinginput" type="date" max="2024-12-31" name="expirationdate" required>
                     </label>
                     <label class="kortbetalinglabel" id="betal3">
                         CVC/CVV:
-                        <input class="kortbetalinginput" type="number" placeholder="CVC/CVV" min="3" max="6" required>
+                        <input class="kortbetalinginput" type="text" pattern="[0-9]{3,6}" placeholder="CVC/CVV" minlength="3" maxlength="6" name="cvc" required>
                     </label>
                 </form>
                 <section id="fullforbet">
@@ -261,6 +266,7 @@
                     <li><a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a></li>
                 </ul>
             </section>
+            <a id="skiptop" href="#container">Hopp til toppen</a>
         </footer>
     </div> 
 </body>

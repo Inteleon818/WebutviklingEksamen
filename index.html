@@ -13,6 +13,11 @@
 <body>
     <div id="container">
         <header>
+            <nav class="skip">
+                <ul>
+                    <li><a tabindex="1" href="#popular_products">Hopp til hovedinnholdet</a></li>
+                </ul>
+            </nav>
             <label>
                 <input type="search" placeholder="Søk etter noe fint">
                 <i class="fa-solid fa-magnifying-glass magglass"></i>
@@ -75,129 +80,141 @@
                 </nav>
 
                 <section id="product_grid">
-                    <article id="product1">
+                    <article id="product1" itemscope itemtype="https://schema.org/Product">
                         <section class="withheart">
                             <i class="fa-solid fa-heart"></i>
-                            <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
+                            <a href="product.html"><img itemprop="image" src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
                         <section class="producthead">
-                            <h5>Product name</h5>
-                            <h5>Kr 1999</h5>
+                            <h5 itemprop="name">Product name</h5>
+                            <h5 itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency">NOK</span> <span itemprop="price">1999</span></h5>
                         </section>
-                        <section class="review">
+                        <section class="review" itemprop="aggregateRating"
+                        itemscope itemtype="https://schema.org/AggregateRating">
                             <ul class="stars">
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-regular fa-star"></i></li>
+                                <li itemprop="ratingValue">4</li>
                             </ul>
-                            <h5>842 reviews</h5>
+                            <h5><span itemprop="reviewCount">842</span> reviews</h5>
                         </section>
                     </article>
 
-                    <article id="product2">
+                    <article id="product2" itemscope itemtype="https://schema.org/Product">
                         <section class="withheart">
                             <i class="fa-solid fa-heart"></i>
-                            <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
+                            <a href="product.html"><img itemprop="image" src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
                         <section class="producthead">
-                            <h5>Product name</h5>
-                            <h5>Kr 1999</h5>
+                            <h5 itemprop="name">Product name</h5>
+                            <h5 itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency">NOK</span> <span itemprop="price">1999</span></h5>
                         </section>
-                        <section class="review">
+                        <section class="review" itemprop="aggregateRating"
+                        itemscope itemtype="https://schema.org/AggregateRating">
                             <ul class="stars">
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-regular fa-star"></i></li>
+                                <li itemprop="ratingValue">4</li>
                             </ul>
-                            <h5>842 reviews</h5>
+                            <h5><span itemprop="reviewCount">842</span> reviews</h5>
                         </section>
                     </article>
 
-                    <article id="product3">
+                    <article id="product3" itemscope itemtype="https://schema.org/Product">
                         <section class="withheart">
                             <i class="fa-solid fa-heart"></i>
-                            <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
-                            </section>
-                        <section class="producthead">
-                            <h5>Product name</h5>
-                            <h5>Kr 1999</h5>
+                            <a href="product.html"><img itemprop="image" src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
-                        <section class="review">
+                        <section class="producthead">
+                            <h5 itemprop="name">Product name</h5>
+                            <h5 itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency">NOK</span> <span itemprop="price">1999</span></h5>
+                        </section>
+                        <section class="review" itemprop="aggregateRating"
+                        itemscope itemtype="https://schema.org/AggregateRating">
                             <ul class="stars">
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-regular fa-star"></i></li>
+                                <li itemprop="ratingValue">4</li>
                             </ul>
-                            <h5>842 reviews</h5>
+                            <h5><span itemprop="reviewCount">842</span> reviews</h5>
                         </section>
                     </article>
 
-                    <article id="product4">
+                    <article id="product4" itemscope itemtype="https://schema.org/Product">
                         <section class="withheart">
                             <i class="fa-solid fa-heart"></i>
-                            <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
-                            </section>
-                        <section class="producthead">
-                            <h5>Product name</h5>
-                            <h5>Kr 1999</h5>
+                            <a href="product.html"><img itemprop="image" src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
-                        <section class="review">
+                        <section class="producthead">
+                            <h5 itemprop="name">Product name</h5>
+                            <h5 itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency">NOK</span> <span itemprop="price">1999</span></h5>
+                        </section>
+                        <section class="review" itemprop="aggregateRating"
+                        itemscope itemtype="https://schema.org/AggregateRating">
                             <ul class="stars">
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-regular fa-star"></i></li>
+                                <li itemprop="ratingValue">4</li>
                             </ul>
-                            <h5>842 reviews</h5>
+                            <h5><span itemprop="reviewCount">842</span> reviews</h5>
                         </section>
                     </article>
 
-                    <article id="product5">
+                    <article id="product5" itemscope itemtype="https://schema.org/Product">
                         <section class="withheart">
                             <i class="fa-solid fa-heart"></i>
-                            <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
-                            </section>
-                        <section class="producthead">
-                            <h5>Product name</h5>
-                            <h5>Kr 1999</h5>
+                            <a href="product.html"><img itemprop="image" src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
-                        <section class="review">
+                        <section class="producthead">
+                            <h5 itemprop="name">Product name</h5>
+                            <h5 itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency">NOK</span> <span itemprop="price">1999</span></h5>
+                        </section>
+                        <section class="review" itemprop="aggregateRating"
+                        itemscope itemtype="https://schema.org/AggregateRating">
                             <ul class="stars">
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-regular fa-star"></i></li>
+                                <li itemprop="ratingValue">4</li>
                             </ul>
-                            <h5>842 reviews</h5>
+                            <h5><span itemprop="reviewCount">842</span> reviews</h5>
                         </section>
                     </article>
 
-                    <article id="product6">
+                    <article id="product6" itemscope itemtype="https://schema.org/Product">
                         <section class="withheart">
                             <i class="fa-solid fa-heart"></i>
-                            <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
-                            </section>
-                        <section class="producthead">
-                            <h5>Product name</h5>
-                            <h5>Kr 1999</h5>
+                            <a href="product.html"><img itemprop="image" src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
-                        <section class="review">
+                        <section class="producthead">
+                            <h5 itemprop="name">Product name</h5>
+                            <h5 itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency">NOK</span> <span itemprop="price">1999</span></h5>
+                        </section>
+                        <section class="review" itemprop="aggregateRating"
+                        itemscope itemtype="https://schema.org/AggregateRating">
                             <ul class="stars">
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-regular fa-star"></i></li>
+                                <li itemprop="ratingValue">4</li>
                             </ul>
-                            <h5>842 reviews</h5>
+                            <h5><span itemprop="reviewCount">842</span> reviews</h5>
                         </section>
                     </article>
                 </section>
@@ -234,7 +251,7 @@
                 <section class="scroll-container">
                     <article class="anm">
                         <img src="img/dog.jpg" alt="Søt svart, hvit og og brun hund med tunga ut"> <!--Image by <a href="https://pixabay.com/users/beatriz57-189088/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=287420">Beatrix Döring</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=287420">Pixabay</a>-->
-                        <h4>Cute dog</h4>
+                        <p class="dogtitle">Cute dog</p>
                         <section class="review">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -247,7 +264,7 @@
 
                     <article class="anm">
                         <img src="img/dog.jpg" alt="Søt svart, hvit og og brun hund med tunga ut"> <!--Image by <a href="https://pixabay.com/users/beatriz57-189088/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=287420">Beatrix Döring</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=287420">Pixabay</a>-->
-                        <h4>Cute dog</h4>
+                        <p class="dogtitle">Cute dog</p>
                         <section class="review">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -260,7 +277,7 @@
 
                     <article class="anm">
                         <img src="img/dog.jpg" alt="Søt svart, hvit og og brun hund med tunga ut"> <!--Image by <a href="https://pixabay.com/users/beatriz57-189088/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=287420">Beatrix Döring</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=287420">Pixabay</a>-->
-                        <h4>Cute dog</h4>
+                        <p class="dogtitle">Cute dog</p>
                         <section class="review">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -273,7 +290,7 @@
 
                     <article class="anm">
                         <img src="img/dog.jpg" alt="Søt svart, hvit og og brun hund med tunga ut"> <!--Image by <a href="https://pixabay.com/users/beatriz57-189088/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=287420">Beatrix Döring</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=287420">Pixabay</a>-->
-                        <h4>Cute dog</h4>
+                        <p class="dogtitle">Cute dog</p>
                         <section class="review">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -319,6 +336,7 @@
                     <li><a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a></li>
                 </ul>
             </section>
+            <a id="skiptop" href="#container">Hopp til toppen</a>
         </footer>
     </div> 
 </body>
