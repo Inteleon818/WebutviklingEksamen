@@ -175,7 +175,7 @@ header {
             border-radius: 20px;
         }
 
-        p, h5 {
+        p  {
             margin-top: 0;
         }
     }
@@ -247,9 +247,10 @@ header {
 
 .review {
     display: flex;
+    justify-content: space-between;
     gap: 0.2rem;
     
-    h5 {
+    p {
         margin-top: 0.1rem;
         margin-left: 0.6rem;
     }
@@ -424,6 +425,7 @@ header {
         grid-column-end: 2;
         grid-row-start: 3;
         grid-row-end: 4;
+        width: 70%;
     }
 
     #sosiale_medier {
@@ -640,10 +642,11 @@ header {
             border-style: solid;
             border-radius: 20px;
             padding: 1rem;
-        }
 
-        h4 {
-            margin-top: 0;
+            #det4author {
+
+                font-weight: bold;
+            }
         }
 
         .stars2 {
@@ -825,6 +828,7 @@ h3 {
     .price {
         margin-bottom: 0.5rem;
         margin-left: 1.2rem;
+        font-weight: bold;
     }
 
     p {
@@ -1485,6 +1489,7 @@ li {
 
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: auto;
+            max-height: 1270px;
         
             img {
                 width: 100%;
@@ -1532,7 +1537,7 @@ li {
             display: flex;
             flex-direction: column;
             overflow: scroll;
-            max-height: 1150px;
+            max-height: 1400px;
 
             label select:hover {
                 border-width: 4px;
