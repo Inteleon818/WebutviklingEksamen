@@ -10,7 +10,7 @@
     <link href="ikoner/css/solid.css" rel="stylesheet">
     <link href="ikoner/css/regular.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Checkout</title>
+    <title>Produktside for Webutvkling Eksamen</title>
 </head>
 <body>
     <div id="container">
@@ -20,12 +20,10 @@
                     <li><a tabindex="1" href="#shopbag">Hopp til hovedinnholdet</a></li>
                 </ul>
             </nav>
-            <form>
-                <label>
-                    <input type="search" placeholder="Søk etter noe fint">
-                    <i class="fa-solid fa-magnifying-glass magglass"></i>
-                </label>
-            </form>
+            <label>
+                <input type="search" placeholder="Søk etter noe fint">
+                <i class="fa-solid fa-magnifying-glass magglass"></i>
+            </label>
             <nav class="nav1">
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
@@ -45,95 +43,89 @@
         </header>
 
         <main>
-            <a id="fortogh" href="index.html"><i class="fa-solid fa-arrow-left"></i>Fortsett og handle</a>
-            <h2 id="cart">Kasse</h2>
-            <section id="shopbag">
-                <h2>1. SHOPPINGBAGEN DIN</h2>
-                <article class="myitems">
-                    <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
-                    <section class="prodinfo">
-                        <h4><a href="product.html">Product name</a></h4>
-                        <p>2300 kr</p>
-                        <p>Farge: <span>Grønn</span></p>
-                    </section>
-                    <form method="post" action="#">
-                        <label for="size1" class="stor">Størrelse:</label>
-                        <select id="size1" name="size1">
-                            <option value="xs">XS</option> <!--https://stackoverflow.com/questions/9447134/default-text-which-wont-be-shown-in-drop-down-list-->
-                            <option value="s">S</option>
-                            <option value="m">M</option> <!--https://www.w3schools.com/tags/tag_select.asp-->
-                            <option value="l">L</option>
-                            <option value="xl">XL</option>
-                        </select>
-                        <label>
-                            Antall:
-                            <input class="amofproc" type="number" value="1" min="1" max="10" name="amount" required>
-                        </label>
-                    </form>
-                    <section class="prodicons">
+            <form method="post" action="#">
+                <a id="fortogh" href="index.html"><i class="fa-solid fa-arrow-left"></i>Fortsett og handle</a>
+                <h2 id="cart">Kasse</h2>
+                <section id="shopbag">
+                    <h2>1. SHOPPINGBAGEN DIN</h2>
+                    <article class="myitems">
+                        <a tabindex="-1" href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
+                        <section class="prodinfo">
+                            <h4><a href="product.html">Product name</a></h4>
+                            <p>2300 kr</p>
+                            <p>Farge: <span>Grønn</span></p>
+                        </section>
+                        <section class="size_and_amount">
+                            <h4 class="stor"><label for="size1">Størrelse:</label></h4>
+                            <select id="size1" name="size1">
+                                <option value="xs">XS</option> <!--https://stackoverflow.com/questions/9447134/default-text-which-wont-be-shown-in-drop-down-list-->
+                                <option value="s">S</option>
+                                <option value="m">M</option> <!--https://www.w3schools.com/tags/tag_select.asp-->
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                            </select>
+                            <label>
+                                Antall:
+                                <input class="amofproc" type="number" value="1" min="1" max="10" name="amount" required>
+                            </label>
+                        </section>
                         <i class="fa-solid fa-heart"></i>
                         <i class="fa-solid fa-trash"></i>
-                    </section>
-                </article>
+                    </article>
 
-                <article class="myitems">
-                    <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
-                    <section class="prodinfo">
-                        <h4><a href="product.html">Product name</a></h4>
-                        <p>2300 kr</p>
-                        <p>Farge: <span>Grønn</span></p>
-                    </section>
-                    <form method="post" action="#">
-                        <label for="size2" class="stor">Størrelse:</label>
-                        <select id="size2" name="size2">
-                            <option value="xs">XS</option> <!--https://stackoverflow.com/questions/9447134/default-text-which-wont-be-shown-in-drop-down-list-->
-                            <option value="s">S</option>
-                            <option value="m">M</option> <!--https://www.w3schools.com/tags/tag_select.asp-->
-                            <option value="l">L</option>
-                            <option value="xl">XL</option>
-                        </select>
-                        <label>
-                            Antall:
-                            <input class="amofproc" type="number" value="1" min="1" max="10" name="amount" required>
-                        </label>
-                    </form>
-                    <section class="prodicons">
+                    <article class="myitems">
+                        <a tabindex="-1" href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
+                        <section class="prodinfo">
+                            <h4><a href="product.html">Product name</a></h4>
+                            <p>2300 kr</p>
+                            <p>Farge: <span>Grønn</span></p>
+                        </section>
+                        <section class="size_and_amount">
+                            <h4 class="stor"><label for="size2">Størrelse:</label></h4>
+                            <select id="size2" name="size2">
+                                <option value="xs">XS</option> <!--https://stackoverflow.com/questions/9447134/default-text-which-wont-be-shown-in-drop-down-list-->
+                                <option value="s">S</option>
+                                <option value="m">M</option> <!--https://www.w3schools.com/tags/tag_select.asp-->
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                            </select>
+                            <label>
+                                Antall:
+                                <input class="amofproc" type="number" value="1" min="1" max="10" name="amount" required>
+                            </label>
+                        </section>
                         <i class="fa-solid fa-heart"></i>
                         <i class="fa-solid fa-trash"></i>
-                    </section>
-                </article>
+                    </article>
 
-                <article class="myitems">
-                    <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
-                    <section class="prodinfo">
-                        <h4><a href="product.html">Product name</a></h4>
-                        <p>2300 kr</p>
-                        <p>Farge: <span>Grønn</span></p>
-                    </section>
-                    <form method="post" action="#">
-                        <label for="size3" class="stor">Størrelse:</label>
-                        <select id="size3" name="size3">
-                            <option value="xs">XS</option> <!--https://stackoverflow.com/questions/9447134/default-text-which-wont-be-shown-in-drop-down-list-->
-                            <option value="s">S</option>
-                            <option value="m">M</option> <!--https://www.w3schools.com/tags/tag_select.asp-->
-                            <option value="l">L</option>
-                            <option value="xl">XL</option>
-                        </select>
-                        <label>
-                            Antall:
-                            <input class="amofproc" type="number" value="1" min="1" max="10" name="amount" required>
-                        </label>
-                    </form>
-                    <section class="prodicons">
+                    <article class="myitems">
+                        <a tabindex="-1" href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
+                        <section class="prodinfo">
+                            <h4><a href="product.html">Product name</a></h4>
+                            <p>2300 kr</p>
+                            <p>Farge: <span>Grønn</span></p>
+                        </section>
+                        <section class="size_and_amount">
+                            <h4 class="stor"><label for="size3">Størrelse:</label></h4>
+                            <select id="size3" name="size3">
+                                <option value="xs">XS</option> <!--https://stackoverflow.com/questions/9447134/default-text-which-wont-be-shown-in-drop-down-list-->
+                                <option value="s">S</option>
+                                <option value="m">M</option> <!--https://www.w3schools.com/tags/tag_select.asp-->
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                            </select>
+                            <label>
+                                Antall:
+                                <input class="amofproc" type="number" value="1" min="1" max="10" name="amount" required>
+                            </label>
+                        </section>
                         <i class="fa-solid fa-heart"></i>
                         <i class="fa-solid fa-trash"></i>
-                    </section>
-                </article>
-            </section>
-            <section id="userdata">
-                <h2>2. DINE OPPLYSNINGER</h2>
-                <h3>Leveringsadresse</h3>
-                <form id="custinfo" method="post" action="#">
+                    </article>
+                </section>
+                <section id="userdata">
+                    <h2>2. DINE OPPLYSNINGER</h2>
+                    <h3 id="lever">Leveringsadresse</h3>
                     <label id="fr">
                         Fornavn:
                         <input type="text" pattern="[A-Za-zæøåÆØÅ ]{2,}" placeholder="Jane*" minlength="3" maxlength="30" name="fname" required>
@@ -154,7 +146,7 @@
                         Poststed:
                         <input type="text" pattern="[A-Za-zæøåÆØÅ ]{2,}" placeholder="Halden*" minlength="2" maxlength="50" name="postarea" required>
                     </label>
-                    <h3>Kontaktinformasjon</h3>
+                    <h3 id="kontaktinfo">Kontaktinformasjon</h3>
                     <label id="ep">
                         E-post:
                         <input type="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="John@mail.com" minlength="10" maxlength="50" name="email" required>
@@ -163,49 +155,51 @@
                         Telefon:
                         <input type="tel" pattern="[0-9]{8,12}" placeholder="+47 12345678" minlength="8" maxlength="16" name="phonenumber" required>
                     </label>
-                </form>
                     <p id="lag">Lagre</p>
                     <a href="#"><p>Avbryt</p></a>
-            </section>
-            <section id="deli">
-                <h2>3. LEVERING</h2>
-                <h3>LEVERINGSVALG</h3>
-                <form method="post" action="#">
+                </section>
+                <section id="deli">
+                    <h2>3. LEVERING</h2>
+                    <h3>LEVERINGSVALG</h3>
                     <section class="rad">
-                        <label>
-                            <input type="radio" name="levering" value="Hjem" required> 
-                            Express Hjemlevering
-                        </label>
+                        <h4>
+                            <label>
+                                <input type="radio" name="levering" value="Hjem" required> 
+                                Express Hjemlevering
+                            </label>
+                        </h4>
                         <p class="daylivery">3-4 Virkedager</p>
                         <p class="price">59 kr<i class="fa-solid fa-truck"></i></p>
                         <p class="desc">Få pakken levert ekstra tidlig. For postnummer 4000-7999 leveres pakken innen 2 hverdager. For postnummer 8000-9999 leveres pakken innen 3 hverdager.</p>
                     </section>
                     <br>
                     <section class="rad">
-                        <label>
-                            <input type="radio" name="levering" value="Utlevering" required>
-                            Express Pakke til utleveringssted
-                        </label>
+                        <h4>
+                            <label>
+                                <input type="radio" name="levering" value="Utlevering" required>
+                                Express Pakke til utleveringssted
+                            </label>
+                        </h4>
                         <p class="daylivery">1-3 Virkedager</p>
                         <p class="price">Gratis<i class="fa-brands fa-dhl"></i></p>
                         <p class="desc">Leveres til nærmeste butikk med postbehandling</p>
                     </section>
                     <br>
                     <section class="rad">
-                        <label>
-                            <input type="radio" name="levering" value="Standard" required> 
-                            Standard Hjemlevering
-                        </label>
+                        <h4>
+                            <label>
+                                <input type="radio" name="levering" value="Standard" required> 
+                                Standard Hjemlevering
+                            </label>
+                        </h4>
                         <p class="daylivery">5-8 Virkedager</p>
                         <p class="price">39 kr<i class="fa-solid fa-computer-mouse"></i></p>
                         <p class="desc">Leveres hjem til deg rundt ettermiddag innen 4-9 hverdager</p>
                     </section>
-                </form>
-            </section>
-            <section id="payment">
-                <h2>4. BETALING</h2>
-                <h3>BETAL MED KORT<i class="fa-solid fa-credit-card"></i></h3>
-                <form id="betalingsform" method="post" action="#">
+                </section>
+                <section id="payment">
+                    <h2>4. BETALING</h2>
+                    <h3>BETAL MED KORT<i class="fa-solid fa-credit-card"></i></h3>
                     <label class="kortbetalinglabel" id="betal1">
                         Kortnummer:
                         <input class="kortbetalinginput" type="text" pattern="[0-9]{12,20}" placeholder="342342****3435" minlength="12" maxlength="20" name="cardnumber" required>
@@ -218,26 +212,24 @@
                         CVC/CVV:
                         <input class="kortbetalinginput" type="text" pattern="[0-9]{3,6}" placeholder="CVC/CVV" minlength="3" maxlength="6" name="cvc" required>
                     </label>
-                </form>
-                <section id="fullforbet">
-                    <h4>Å betale inkl. mva.</h4>
-                    <p id="totpris">3000 kr</p>
-                    <h3 id="kjop">Fullfør kjøp</h3>
-                    <p>Du bekrefter herved at opplysningene og dokumentene du har
-                        oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg
-                        retten til å heve eller avslutte avtaleforholdet dersom det foreligger
-                        uriktige eller ufullstendige opplysninger.</p>
-                    <form id="vilkorboks">
+                    <section id="fullforbet">
+                        <h4>Å betale inkl. mva.</h4>
+                        <p id="totpris">3000 kr</p>
+                        <input id="kjop" type="submit" value="Fullfør kjøp">
+                        <p>Du bekrefter herved at opplysningene og dokumentene du har
+                            oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg
+                            retten til å heve eller avslutte avtaleforholdet dersom det foreligger
+                            uriktige eller ufullstendige opplysninger.</p>
                         <fieldset> <!--Underlagt fieldset for å assosiere checkboxes-->
-                        <input class="bkrbox" type="checkbox" id="vilkår" name="bekreftelse" value="bekreftelse" required> 
-                        <label for="vilkår">Ja, jeg godtar vilkårene</label>
-                        <br>
-                        <input class="bkrbox" type="checkbox" id="nyhetsbrev" name="bekreftelse" value="bekreftelse" required>
-                        <label for="nyhetsbrev">Ja takk! Send nyhetsbrev til meg</label>
+                            <input class="bkrbox" type="checkbox" id="vilkår" name="bekreftelse" value="bekreftelse" required> 
+                            <label for="vilkår">Ja, jeg godtar vilkårene</label>
+                            <br>
+                            <input class="bkrbox" type="checkbox" id="nyhetsbrev" name="bekreftelse" value="bekreftelse">
+                            <label for="nyhetsbrev">Ja takk! Send nyhetsbrev til meg</label>
                         </fieldset>
-                    </form>
+                    </section>
                 </section>
-            </section>
+            </form>
         </main>
 
         <footer id="contact_information">
@@ -260,7 +252,7 @@
                     <li><a href="#">Produkter</a></li>
                     <li><a href="#">Kategorier</a></li>
                     <li><a href="#">Kontakt oss</a></li>
-                    <li><a href="https://hiof-my.sharepoint.com/:x:/g/personal/danielpk_hiof_no/EQgp2exlw7JMmf4SCXgXJ5gBF4OPOUM6o4IUt2bwUR2Wcw?e=LAemmA">Tilgjengelighetserklæring</a></li>
+                    <li><a href="https://hiof-my.sharepoint.com/:x:/r/personal/danielpk_hiof_no/Documents/Mal%20%E2%80%93%C2%A0WCAG-sjekkliste%20for%20utfylling%20av%20tilgjengelighetserkl%C3%A6ring%20for%20nettl%C3%B8sning%2024.01.2024.xlsx?d=wecd92908c3654cb299fe120978172798&csf=1&web=1&e=VETAML">Tilgjengelighetserklæring</a></li>
                 </ul>
             </section>
             <section id="sosiale_medier">
