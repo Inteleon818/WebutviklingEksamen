@@ -25,17 +25,21 @@ header {
         input {
             border-width: 2px;
             border-radius: 20px;
-            color: rgb(154, 154, 154);
             display: inline-block;
             padding-left: 0.5rem;
             padding: 0.3rem;
+            margin-top: 0.5rem;
+        }
+
+        ::placeholder {
+            color: rgb(62, 62, 62); /*Sterkere kontrast*/ /*https://www.w3schools.com/howto/howto_css_placeholder.asp*/
         }
 
         .magglass {
             position: absolute;
             font-size: 10px;
             right: 5%;
-            bottom: 35%;
+            bottom: 15%;
         }
     
     }
@@ -243,6 +247,11 @@ header {
     justify-content: space-between;
     gap: 1rem;
     font-weight: bold;
+    margin-top: 0.5rem; /*Mer plass mellom bilde og tekst*/
+
+    h4 {
+        margin-top: 0;
+    }
 }
 
 .review {
@@ -275,7 +284,7 @@ header {
         margin-top: 2rem;
     }
 
-    p {
+    h3 {
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 2;
@@ -411,12 +420,12 @@ header {
 
         padding-right: 1rem;
 
-        li {
-            margin-bottom: 0.5rem;
+        li, i {
+            margin-bottom: 0.7rem; /*Større mellomrom for footer elementer*/
         }
 
         i {
-            margin-right: 0.5rem;
+            margin-right: 0.4rem;
         }
     }
 
@@ -426,6 +435,10 @@ header {
         grid-row-start: 3;
         grid-row-end: 4;
         width: 70%;
+        
+        li {
+            margin-bottom: 1rem; /*Større mellomrom for footer elementer*/
+        }
     }
 
     #sosiale_medier {
@@ -515,7 +528,7 @@ header {
 
     #mrknvn {
         text-decoration: underline;
-        color: rgb(154, 154, 154);
+        color: rgb(112, 112, 112); /*Sterkere kontrastfarge enn før*/
     }
 
     span {
@@ -638,15 +651,10 @@ header {
 
         #det4section {
             border-width: 2px;
-            border-color: rgb(154, 154, 154);
+            border-color: rgb(154, 154, 154); 
             border-style: solid;
             border-radius: 20px;
             padding: 1rem;
-
-            #det4author {
-
-                font-weight: bold;
-            }
         }
 
         .stars2 {
@@ -716,7 +724,8 @@ h3 {
             border-radius: 20px;
         }
 
-        .producthead h5 {
+        h4, p {
+            font-size: 0.8rem;
             margin-top: 0;
         }
     }
@@ -838,7 +847,7 @@ h3 {
     }
 
     .daylivery {
-        color: rgb(154, 154, 154);
+        color: rgb(112, 112, 112); /*Sterkere kontrastfarge enn før*/
     }
 
     i {
@@ -857,7 +866,7 @@ h3 {
         font-size: 0.9rem;
     }
 
-    p {
+    p, h4 {
         text-align: center;
         margin: 0.5rem;
     }
@@ -1018,7 +1027,7 @@ li {
 @media only screen and (max-width:1000px) {
 
     header input {
-        width: 30vw;
+        width: 50vw;
     }
 
     #fortogh {
@@ -1119,7 +1128,7 @@ li {
             grid-row-end: 2;
         }
     
-        p {
+        h3 {
             grid-column-start: 1;
             grid-column-end: 3;
             grid-row-start: 2;
@@ -1389,7 +1398,7 @@ li {
             grid-row-end: 2;
         }
     
-        p {
+        h3 {
             grid-column-start: 1;
             grid-column-end: 4;
             grid-row-start: 2;

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="nb">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hovedsiden for Webutvikling Eksamen 2024.">
+    <meta name="author" content="Daniel Karlsen">
     <link href="ikoner/css/fontawesome.css" rel="stylesheet">
     <link href="ikoner/css/brands.css" rel="stylesheet">
     <link href="ikoner/css/solid.css" rel="stylesheet">
@@ -18,10 +20,12 @@
                     <li><a tabindex="1" href="#popular_products">Hopp til hovedinnholdet</a></li>
                 </ul>
             </nav>
-            <label>
-                <input type="search" placeholder="Søk etter noe fint">
-                <i class="fa-solid fa-magnifying-glass magglass"></i>
-            </label>
+            <form>
+                <label for="searcharea">
+                    <input id="searcharea" type="search" placeholder="Søk etter noe fint">
+                    <i class="fa-solid fa-magnifying-glass magglass"></i>
+                </label>
+            </form>
             <nav class="nav1">
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
@@ -35,7 +39,7 @@
                 <ul class="navul2">
                     <li><i class="fa-solid fa-user"></i></li>
                     <li><i class="fa-solid fa-heart"></i></li>
-                    <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a aria-label="Til handlekurven" href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li> <!--Lagt til aria label for skjermleser-->
                 </ul>
             </nav>
         </header>
@@ -72,7 +76,7 @@
 
             <section id="popular_products">
                 <h2>Våre mest populære produkter</h2>
-                <p>Oppdag det beste av det beste</p>
+                <h3>Oppdag det beste av det beste</h3>
                 <nav id="product_category">
                     <a href="product.html">New product</a>
                     <a href="product.html">Special Price</a>
@@ -86,7 +90,7 @@
                             <a href="product.html"><img itemprop="image" src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
                         <section class="producthead">
-                            <p itemprop="name"><a href="product.html">Product name</a></p>
+                            <h4 itemprop="name"><a href="product.html">Product name</a></h4>
                             <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency">NOK</span> <span itemprop="price">1999</span></p>
                         </section>
                         <section class="review" itemprop="aggregateRating"
@@ -109,7 +113,7 @@
                             <a href="product.html"><img itemprop="image" src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
                         <section class="producthead">
-                            <p itemprop="name"><a href="product.html">Product name</a></p>
+                            <h4 itemprop="name"><a href="product.html">Product name</a></h4>
                             <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency">NOK</span> <span itemprop="price">1999</span></p>
                         </section>
                         <section class="review" itemprop="aggregateRating"
@@ -132,7 +136,7 @@
                             <a href="product.html"><img itemprop="image" src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
                         <section class="producthead">
-                            <p itemprop="name"><a href="product.html">Product name</a></p>
+                            <h4 itemprop="name"><a href="product.html">Product name</a></h4>
                             <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency">NOK</span> <span itemprop="price">1999</span></p>
                         </section>
                         <section class="review" itemprop="aggregateRating"
@@ -155,7 +159,7 @@
                             <a href="product.html"><img itemprop="image" src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
                         <section class="producthead">
-                            <p itemprop="name"><a href="product.html">Product name</a></p>
+                            <h4 itemprop="name"><a href="product.html">Product name</a></h4>
                             <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency">NOK</span> <span itemprop="price">1999</span></p>
                         </section>
                         <section class="review" itemprop="aggregateRating"
@@ -178,7 +182,7 @@
                             <a href="product.html"><img itemprop="image" src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
                         <section class="producthead">
-                            <p itemprop="name"><a href="product.html">Product name</a></p>
+                            <h4 itemprop="name"><a href="product.html">Product name</a></h4>
                             <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency">NOK</span> <span itemprop="price">1999</span></p>
                         </section>
                         <section class="review" itemprop="aggregateRating"
@@ -201,7 +205,7 @@
                             <a href="product.html"><img itemprop="image" src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
                         <section class="producthead">
-                            <p itemprop="name"><a href="product.html">Product name</a></p>
+                            <h4 itemprop="name"><a href="product.html">Product name</a></h4>
                             <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency">NOK</span> <span itemprop="price">1999</span></p>
                         </section>
                         <section class="review" itemprop="aggregateRating"
@@ -222,32 +226,31 @@
 
             <section id="popular_categories">
                 <h2>Våre mest populære kategorier</h2>
-                <p>Oppdag det beste av det beste</p>
+                <h3>Oppdag det beste av det beste</h3>
                 <article id="ctg1">
                     <img src="img/mountain_blur.jpg" alt="Stort fjell dekket med snø"> <!--https://pixabay.com/photos/ama-dablam-snow-mountain-peak-2064522/-->
                     <h3>Category 1</h3>
                 </article>
                 <article id="ctg2">
-                    <img src="img/seaturtle_blur.jpg" alt="Stort fjell dekket med snø"> <!--Image by <a href="https://pixabay.com/users/kanenori-4749850/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8199770">Kanenori</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8199770">Pixabay</a>-->
+                    <img src="img/seaturtle_blur.jpg" alt="Havskilpadde svømmer i vannet"> <!--Image by <a href="https://pixabay.com/users/kanenori-4749850/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8199770">Kanenori</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8199770">Pixabay</a>-->
                     <h3>Category 2</h3>
                 </article>
                 <article id="ctg3">
-                    <img src="img/house_blur.jpg" alt="Stort fjell dekket med snø"> <!--Image by <a href="https://pixabay.com/users/frankyfromgermany-64960/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=540796">Frank Winkler</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=540796">Pixabay</a>-->
+                    <img src="img/house_blur.jpg" alt="Hus ved buskete omgivelser"> <!--Image by <a href="https://pixabay.com/users/frankyfromgermany-64960/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=540796">Frank Winkler</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=540796">Pixabay</a>-->
                     <h3>Category 3</h3>
                 </article>
                 <article id="ctg4">
-                    <img src="img/benches_blur.jpg" alt="Stort fjell dekket med snø"> <!--Image by <a href="https://pixabay.com/users/pepperminting-633504/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=560435">Pepper Mint</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=560435">Pixabay</a>-->
+                    <img src="img/benches_blur.jpg" alt="Trebenker omrundet av høstblader"> <!--Image by <a href="https://pixabay.com/users/pepperminting-633504/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=560435">Pepper Mint</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=560435">Pixabay</a>-->
                     <h3>Category 4</h3>
                 </article>
                 <article id="ctg5">
-                    <img src="img/moon_blur.jpg" alt="Stort fjell dekket med snø"> <!--Image by <a href="https://pixabay.com/users/cdd20-1193381/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6839521">愚木混株 Cdd20</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6839521">Pixabay</a>-->
+                    <img src="img/moon_blur.jpg" alt="Sjø uten bølger der månelyset reflekterer på vannet"> <!--Image by <a href="https://pixabay.com/users/cdd20-1193381/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6839521">愚木混株 Cdd20</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6839521">Pixabay</a>-->
                     <h3>Category 5</h3>
                 </article>
             </section>
 
             <section id="anmeldelser">
                 <h2>Anmeldelser</h2>
-
                 <section class="scroll-container">
                     <article class="anm">
                         <img src="img/dog.jpg" alt="Søt svart, hvit og og brun hund med tunga ut"> <!--Image by <a href="https://pixabay.com/users/beatriz57-189088/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=287420">Beatrix Döring</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=287420">Pixabay</a>-->
@@ -330,13 +333,13 @@
             <section id="sosiale_medier">
                 <h4>SOSIALE MEDIER</h4>
                 <ul>
-                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a></li>
+                    <li><a aria-label="Link til Instagram" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li> <!--Lagt til aria label for skjermleser-->
+                    <li><a aria-label="Link til Facebook" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li> <!--Lagt til aria label for skjermleser-->
+                    <li><a aria-label="Link til LinkedIn" href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li> <!--Lagt til aria label for skjermleser-->
+                    <li><a aria-label="Link tiL Pinterest" href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a></li> <!--Lagt til aria label for skjermleser-->
                 </ul>
             </section>
-            <a id="skiptop" href="#container">Hopp til toppen</a>
+            <a href="#container" id="skiptop">Hopp til toppen</a>
         </footer>
     </div> 
 </body>

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="nb">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Produktsiden for Webutvikling Eksamen 2024.">
+    <meta name="author" content="Daniel Karlsen">
     <link href="ikoner/css/fontawesome.css" rel="stylesheet">
     <link href="ikoner/css/brands.css" rel="stylesheet">
     <link href="ikoner/css/solid.css" rel="stylesheet">
@@ -18,10 +20,12 @@
                     <li><a tabindex="1" href="#productsite">Hopp til hovedinnholdet</a></li>
                 </ul>
             </nav>
-            <label>
-                <input type="search" placeholder="Søk etter noe fint">
-                <i class="fa-solid fa-magnifying-glass magglass"></i>
-            </label>
+            <form>
+                <label>
+                    <input type="search" placeholder="Søk etter noe fint">
+                    <i class="fa-solid fa-magnifying-glass magglass"></i>
+                </label>
+            </form>
             <nav class="nav1">
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
@@ -35,7 +39,7 @@
                 <ul class="navul2">
                     <li><i class="fa-solid fa-user"></i></li>
                     <li><i class="fa-solid fa-heart"></i></li>
-                    <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a aria-label="Til handlekurven" href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li> <!--Lagt til aria label for skjermleser-->
                 </ul>
             </nav>
         </header>
@@ -64,8 +68,8 @@
                 <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="price">5195</span><span itemprop="priceCurrency">NOK</span> inkl. mva.</p>
                 <p>Farge: <span itemprop="color">Marineblå</span></p>
 
-                <label>
-                    <select>
+                <label for="storrelse">
+                    <select id="storrelse">
                         <option selected disabled hidden>Velg størrlse</option> <!--https://stackoverflow.com/questions/9447134/default-text-which-wont-be-shown-in-drop-down-list-->
                         <option itemprop="size" value="xs">XS</option>
                         <option itemprop="size" value="s">S</option>
@@ -166,7 +170,7 @@
                         <i id="star5" class="fa-regular fa-star"><span>32</span></i>
                     </summary>
                     <section id="det4section" itemprop="review" itemscope itemtype="https://schema.org/Review">
-                        <p id="det4author" itemprop="author">Rober Labrador</p>
+                        <h4 itemprop="author">Rober Labrador</h4>
                         <p itemprop="dateCreated">2024-10-02</p>
                         <ul class="stars2" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                             <li><i class="fa-solid fa-star"></i></li>
@@ -194,7 +198,7 @@
                         <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                     </section>
                     <section class="producthead">
-                        <a href="product.html">Product name</a>
+                        <h4><a href="product.html">Product name</a></h4>
                         <p>NOK 1999</p>
                     </section>
                     <section class="review">
@@ -215,28 +219,7 @@
                         <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                     </section>
                     <section class="producthead">
-                        <a href="product.html">Product name</a>
-                        <p>NOK 1999</p>
-                    </section>
-                    <section class="review">
-                        <ul class="stars">
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-regular fa-star"></i></li>
-                        </ul>
-                        <p>842 reviews</p>
-                    </section>
-                </article>
-
-                <article>
-                    <section class="withheart">
-                        <i class="fa-solid fa-heart"></i>
-                        <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
-                        </section>
-                    <section class="producthead">
-                        <a href="product.html">Product name</a>
+                        <h4><a href="product.html">Product name</a></h4>
                         <p>NOK 1999</p>
                     </section>
                     <section class="review">
@@ -257,7 +240,7 @@
                         <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
                     <section class="producthead">
-                        <a href="product.html">Product name</a>
+                        <h4><a href="product.html">Product name</a></h4>
                         <p>NOK 1999</p>
                     </section>
                     <section class="review">
@@ -278,7 +261,7 @@
                         <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
                     <section class="producthead">
-                        <a href="product.html">Product name</a>
+                        <h4><a href="product.html">Product name</a></h4>
                         <p>NOK 1999</p>
                     </section>
                     <section class="review">
@@ -299,7 +282,28 @@
                         <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                         </section>
                     <section class="producthead">
-                        <a href="product.html">Product name</a>
+                        <h4><a href="product.html">Product name</a></h4>
+                        <p>NOK 1999</p>
+                    </section>
+                    <section class="review">
+                        <ul class="stars">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ul>
+                        <p>842 reviews</p>
+                    </section>
+                </article>
+
+                <article>
+                    <section class="withheart">
+                        <i class="fa-solid fa-heart"></i>
+                        <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
+                        </section>
+                    <section class="producthead">
+                        <h4><a href="product.html">Product name</a></h4>
                         <p>NOK 1999</p>
                     </section>
                     <section class="review">
@@ -342,14 +346,15 @@
             <section id="sosiale_medier">
                 <h4>SOSIALE MEDIER</h4>
                 <ul>
-                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a></li>
+                    <li><a aria-label="Link til Instagram" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li> <!--Lagt til aria label for skjermleser-->
+                    <li><a aria-label="Link til Facebook" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li> <!--Lagt til aria label for skjermleser-->
+                    <li><a aria-label="Link til LinkedIn" href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li> <!--Lagt til aria label for skjermleser-->
+                    <li><a aria-label="Link tiL Pinterest" href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a></li> <!--Lagt til aria label for skjermleser-->
                 </ul>
             </section>
-            <a id="skiptop" href="#container">Hopp til toppen</a>
+            <a href="#container" id="skiptop">Hopp til toppen</a>
         </footer>
     </div>   
 </body>
 </html>
+

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="nb">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Handlekurvsiden for Webutvikling Eksamen 2024.">
+    <meta name="author" content="Daniel Karlsen">
     <link href="ikoner/css/fontawesome.css" rel="stylesheet">
     <link href="ikoner/css/brands.css" rel="stylesheet">
     <link href="ikoner/css/solid.css" rel="stylesheet">
@@ -18,10 +20,12 @@
                     <li><a tabindex="1" href="#shopbag">Hopp til hovedinnholdet</a></li>
                 </ul>
             </nav>
-            <label>
-                <input type="search" placeholder="Søk etter noe fint">
-                <i class="fa-solid fa-magnifying-glass magglass"></i>
-            </label>
+            <form>
+                <label>
+                    <input type="search" placeholder="Søk etter noe fint">
+                    <i class="fa-solid fa-magnifying-glass magglass"></i>
+                </label>
+            </form>
             <nav class="nav1">
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
@@ -35,7 +39,7 @@
                 <ul class="navul2">
                     <li><i class="fa-solid fa-user"></i></li>
                     <li><i class="fa-solid fa-heart"></i></li>
-                    <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a aria-label="Til handlekurven" href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li> <!--Lagt til aria label for skjermleser-->
                 </ul>
             </nav>
         </header>
@@ -48,7 +52,7 @@
                 <article class="myitems">
                     <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                     <section class="prodinfo">
-                        <a href="product.html">Product name</a>
+                        <h4><a href="product.html">Product name</a></h4>
                         <p>2300 kr</p>
                         <p>Farge: <span>Grønn</span></p>
                     </section>
@@ -75,7 +79,7 @@
                 <article class="myitems">
                     <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                     <section class="prodinfo">
-                        <a href="product.html">Product name</a>
+                        <h4><a href="product.html">Product name</a></h4>
                         <p>2300 kr</p>
                         <p>Farge: <span>Grønn</span></p>
                     </section>
@@ -102,7 +106,7 @@
                 <article class="myitems">
                     <a href="product.html"><img src="img/butterfly.jpg" alt="Sommerfugl som sitter oppå en gul blomst"> <!--Image by <a href="https://pixabay.com/users/anselmo7511-43046719/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Anselmo Rodrigues</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9093549">Pixabay</a>--></a>
                     <section class="prodinfo">
-                        <a href="product.html">Product name</a>
+                        <h4><a href="product.html">Product name</a></h4>
                         <p>2300 kr</p>
                         <p>Farge: <span>Grønn</span></p>
                     </section>
@@ -216,7 +220,7 @@
                     </label>
                 </form>
                 <section id="fullforbet">
-                    <p>Å betale inkl. mva.</p>
+                    <h4>Å betale inkl. mva.</h4>
                     <p id="totpris">3000 kr</p>
                     <h3 id="kjop">Fullfør kjøp</h3>
                     <p>Du bekrefter herved at opplysningene og dokumentene du har
@@ -224,11 +228,13 @@
                         retten til å heve eller avslutte avtaleforholdet dersom det foreligger
                         uriktige eller ufullstendige opplysninger.</p>
                     <form id="vilkorboks">
+                        <fieldset> <!--Underlagt fieldset for å assosiere checkboxes-->
                         <input class="bkrbox" type="checkbox" id="vilkår" name="bekreftelse" value="bekreftelse" required> 
                         <label for="vilkår">Ja, jeg godtar vilkårene</label>
                         <br>
                         <input class="bkrbox" type="checkbox" id="nyhetsbrev" name="bekreftelse" value="bekreftelse" required>
                         <label for="nyhetsbrev">Ja takk! Send nyhetsbrev til meg</label>
+                        </fieldset>
                     </form>
                 </section>
             </section>
@@ -260,13 +266,13 @@
             <section id="sosiale_medier">
                 <h4>SOSIALE MEDIER</h4>
                 <ul>
-                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a></li>
+                    <li><a aria-label="Link til Instagram" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li> <!--Lagt til aria label for skjermleser-->
+                    <li><a aria-label="Link til Facebook" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li> <!--Lagt til aria label for skjermleser-->
+                    <li><a aria-label="Link til LinkedIn" href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li> <!--Lagt til aria label for skjermleser--> 
+                    <li><a aria-label="Link tiL Pinterest" href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a></li> <!--Lagt til aria label for skjermleser-->
                 </ul>
             </section>
-            <a id="skiptop" href="#container">Hopp til toppen</a>
+            <a href="#container" id="skiptop">Hopp til toppen</a>
         </footer>
     </div> 
 </body>
