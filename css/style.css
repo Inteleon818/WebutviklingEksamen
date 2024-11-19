@@ -1519,7 +1519,7 @@ li {
 
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: auto;
-            max-height: 1270px;
+            max-height: 1140px;
         
             img {
                 width: 100%;
