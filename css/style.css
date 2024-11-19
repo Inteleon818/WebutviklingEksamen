@@ -28,7 +28,6 @@ header {
             display: inline-block;
             padding-left: 0.5rem;
             padding: 0.3rem;
-            margin-top: 0.5rem;
         }
 
         ::placeholder {
@@ -39,7 +38,7 @@ header {
             position: absolute;
             font-size: 10px;
             right: 5%;
-            bottom: 25%;
+            bottom: 33%;
         }
     
     }
@@ -163,24 +162,79 @@ header {
 }
 
 #product_grid {
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    margin-left: 1rem;
 
     article {
         width: 95%;
+        position: relative;
+        margin-left: 0.5rem;
     
         .producthead, .review {
             max-width: 93%;
         }
 
         img {
-            width: 100%;
+            width: 200%;
             border-radius: 20px;
         }
 
-        p  {
-            margin-top: 0;
+        h4 {
+            margin-top: 0.5rem;
+        }
+
+        .fa-heart {
+            position: absolute;
+            top: 5%;
+            right: 8%;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+        }
+
+        .fa-heart:hover {
+            color: rgb(192, 51, 51);
+            transform: scale(1.5); /*https://www.shecodes.io/athena/3020-how-to-use-hover-to-expand-a-button-in-css*/
+        }
+    }
+}
+
+.productsingrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin-bottom: 1rem;
+
+    img {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    h4 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        margin-bottom: 0;
+
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            font-weight: 500;
+        }
+    }
+
+    ul {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+
+        span {
+            margin-left: 0.5rem;
         }
     }
 }
@@ -194,7 +248,6 @@ header {
 }
 
 #product2 {
-    margin-top: 0;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -229,45 +282,8 @@ header {
     grid-row-end: 7;
 }
 
-.withheart {
-    position: relative;
-    display: inline-block;
-    color: rgb(255, 255, 255);
-    
-    i{
-        position: absolute;
-        top: 10%;
-        right: 8%;
-        font-size: 20px;
-    }
-}
-
-.producthead {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    font-weight: bold;
-    margin-top: 0.5rem; /*Mer plass mellom bilde og tekst*/
-
-    h4 {
-        margin-top: 0;
-    }
-}
-
-.review {
-    display: flex;
-    justify-content: space-between;
-    gap: 0.2rem;
-    
-    p {
-        margin-top: 0.1rem;
-        margin-left: 0.6rem;
-    }
-}
-
 .stars {
     display: flex;
-    margin-top: 0;
 }
 
 #popular_categories {
@@ -678,6 +694,7 @@ aside {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 0.5rem;
 
     h2 {
         display: inline-block;
@@ -696,37 +713,35 @@ aside {
     }
 }
 
-h3 {
-    margin-top: 1rem;
-    margin-right: 1.5rem;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
 #product_flex {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#product_flex_2 {
-    display: flex;
-    flex-direction: row;
     overflow: scroll;
     gap: 1rem;
 
     article {
+        position: relative;
+        font-size: 0.8rem;
         
         img {
             max-width: 350px;
             border-radius: 20px;
         }
 
-        h4, p {
-            font-size: 0.8rem;
-            margin-top: 0;
+        h4 {
+            margin-top: 0.3rem;
+        }
+
+        .fa-heart {
+            position: absolute;
+            top: 5%;
+            right: 8%;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+        }
+
+        .fa-heart:hover {
+            color: rgb(192, 51, 51);
+            transform: scale(1.5); /*https://www.shecodes.io/athena/3020-how-to-use-hover-to-expand-a-button-in-css*/
         }
     }
 }
@@ -1309,17 +1324,6 @@ li {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
         font-size: 0.7rem;
-
-        .producthead, .review {
-            max-width: 440px;
-        }
-
-        .fa-heart:hover {
-            color: rgb(192, 51, 51);
-            font-size: 150%;
-            top: 8%;
-            right: 7%;
-        }
     }
     
     #product1 {
@@ -1575,12 +1579,6 @@ li {
 
             #kurvoghjerte {
 
-                .fa-heart:hover {
-                    color: rgb(192, 51, 51);
-                    background-color: rgb(235, 191, 191);
-                    font-size: 110%;
-                }
-
                 #shopcart:hover {
                     opacity: 0.5;
                 }
@@ -1622,16 +1620,6 @@ li {
         }
     }
 
-    aside {
-
-        .fa-heart:hover {
-            color: rgb(192, 51, 51);
-            font-size: 100%;
-            top: 8%;
-            right: 7%;
-        }
-    }
-
     #shopbag {
 
         .myitems {
@@ -1639,12 +1627,6 @@ li {
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             position: relative;
-
-            .fa-heart:hover {
-                color: rgb(192, 51, 51);
-                top: 8%;
-                right: 7%;
-            }
 
             img {
                 width: 100%;
@@ -1687,10 +1669,18 @@ li {
             }
 
             .fa-heart {
+                position: absolute;
                 grid-column-start: 4;
                 grid-column-end: 5;
                 grid-row-start: 1;
                 grid-row-end: 2;
+                width: 20px;
+            }
+
+            .fa-heart:hover {
+                left: -1%;
+                color: rgb(192, 51, 51);
+                transform: scale(1.5); /*https://www.shecodes.io/athena/3020-how-to-use-hover-to-expand-a-button-in-css*/
             }
 
             .fa-trash {
@@ -1901,6 +1891,10 @@ li {
     select:hover, input:hover {
         background-color: rgb(219, 216, 241);
         border-width: 3px;
+    }
+
+    .fa-heart:hover {
+        color: rgb(192, 51, 51);
     }
 
     .skip {
