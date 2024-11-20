@@ -352,7 +352,7 @@ header {
             width: 100%;
             height: 20rem;
             border-style: solid;
-            border-color: rgba(0, 0, 0, 1);
+            border-color: rgb(0, 0, 0);
             border-width: 5px;
         }
     
@@ -377,7 +377,6 @@ header {
 
     .scroll-container {
         display: flex;
-        justify-content: start;
         gap: 1rem;
         overflow: scroll;
 
@@ -818,7 +817,6 @@ aside {
         width: 100%;
         color: rgb(255, 255, 255);
         background-color: black;
-        margin: auto;
         margin-top: 1rem;
         margin-left: 0;
     }
@@ -950,7 +948,7 @@ aside {
     #kjop:hover {
         opacity: 0.5;
         text-decoration: underline;
-        color: rgb(186, 243, 88);
+        color: rgb(255, 255, 39);
     }
 
     .bkrbox {
@@ -1011,7 +1009,7 @@ li {
     z-index: 999;
 }
 
-*:focus {
+*:focus { /*Alle elementer får lik farge når de er fokusert med tab*/
     outline-color: rgb(255, 165, 0); /*https://www.w3.org/TR/2007/WD-WCAG20-TECHS-20071211/C16.html*/
 }
 
@@ -1324,6 +1322,14 @@ li {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
         font-size: 0.7rem;
+
+        article {
+            margin-left: 0.5rem;
+        }
+
+        img {
+            max-width: 700px;
+        }
     }
     
     #product1 {
@@ -1331,11 +1337,6 @@ li {
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
-        margin-left: 0.5rem;
-
-            img {
-                max-width: 700px;
-            }
     }
     
     #product2 {
@@ -1343,11 +1344,6 @@ li {
         grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 2;
-        margin-left: 0.5rem;
-
-            img {
-                max-width: 700px;
-            }
     }
     
     #product3 {
@@ -1356,11 +1352,6 @@ li {
         grid-row-start: 1;
         grid-row-end: 2;
         margin-top: 1rem;
-        margin-left: 0.5rem;
-
-            img {
-                max-width: 700px;
-            }
     }
     
     #product4 {
@@ -1368,11 +1359,6 @@ li {
         grid-column-end: 2;
         grid-row-start: 2;
         grid-row-end: 3;
-        margin-left: 0.5rem;
-
-            img {
-                max-width: 700px;
-            }
     }
     
     #product5 {
@@ -1380,11 +1366,6 @@ li {
         grid-column-end: 3;
         grid-row-start: 2;
         grid-row-end: 3;
-        margin-left: 0.5rem;
-
-            img {
-                max-width: 700px;
-            }
     }
     
     #product6 {
@@ -1392,11 +1373,6 @@ li {
         grid-column-end: 4;
         grid-row-start: 2;
         grid-row-end: 3;
-        margin-left: 0.5rem;
-
-            img {
-                max-width: 700px;
-            }
     }
 
     #popular_categories {
@@ -1432,10 +1408,6 @@ li {
             grid-row-start: 3;
             grid-row-end: 4;
             max-width: 386px;
-
-            h3 {
-                top: 40%;
-            }
         }
     
         #ctg2 {
@@ -1444,10 +1416,6 @@ li {
             grid-row-start: 3;
             grid-row-end: 4;
             max-width: 386px;
-
-            h3 {
-                top: 40%;
-            }
         }
     
         #ctg3 {
@@ -1456,10 +1424,6 @@ li {
             grid-row-start: 3;
             grid-row-end: 4;
             max-width: 386px;
-
-            h3 {
-                top: 40%;
-            }
         }
     
         #ctg4 {
@@ -1468,10 +1432,6 @@ li {
             grid-row-start: 4;
             grid-row-end: 5;
             max-width: 864px;
-
-            h3 {
-                top: 45%;
-            }
         }
     
         #ctg5 {
@@ -1481,10 +1441,6 @@ li {
             grid-row-end: 5;
             max-width: 300px;
             margin: 0 0 0 auto;
-
-            h3 {
-                top: 45%;
-            }
         }
     }
 
