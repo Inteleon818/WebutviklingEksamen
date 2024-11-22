@@ -83,6 +83,7 @@ header {
         margin-bottom: 1rem;
         width: 100%;
         position: relative;
+        text-align: end;
     
         img {
             position: absolute;
@@ -100,7 +101,6 @@ header {
             padding-right: 2rem;
             margin-top: 0;
             margin-left: 37vw;
-            text-align: end;
             max-width: 720px;
         }
 
@@ -108,6 +108,7 @@ header {
             z-index: 1;
             background-color: rgb(255, 255, 255);
             border-radius: 20px;
+            margin-left: 1rem;
             margin-right: 2rem;
             margin-bottom: 1rem;
             padding: 1rem;
@@ -190,11 +191,6 @@ header {
             right: 8%;
             font-size: 20px;
             color: rgb(255, 255, 255);
-        }
-
-        .fa-heart:hover {
-            color: rgb(192, 51, 51);
-            transform: scale(1.5); /*https://www.shecodes.io/athena/3020-how-to-use-hover-to-expand-a-button-in-css*/
         }
     }
 }
@@ -503,6 +499,8 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
+    max-width: 700px;
+    
 
     img {
         width: 100%;
@@ -541,6 +539,10 @@ header {
 
 #product_information {
 
+    .firstprodinfo {
+        max-width: 440px;
+    }
+   
     #mrknvn {
         text-decoration: underline;
         color: rgb(112, 112, 112); /*Sterkere kontrastfarge enn før*/
@@ -622,7 +624,7 @@ header {
     #det3 {
 
         table {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
 
             thead tr th {
                 padding-right: 1rem;
@@ -675,7 +677,7 @@ header {
         .stars2 {
             display: flex;
             margin-top: 0;
-            gap: 1rem;
+            gap: 0.5rem;
         }
     }
 
@@ -736,11 +738,6 @@ aside {
             right: 8%;
             font-size: 20px;
             color: rgb(255, 255, 255);
-        }
-
-        .fa-heart:hover {
-            color: rgb(192, 51, 51);
-            transform: scale(1.5); /*https://www.shecodes.io/athena/3020-how-to-use-hover-to-expand-a-button-in-css*/
         }
     }
 }
@@ -924,13 +921,18 @@ aside {
         padding-bottom: 4rem;
 
         fieldset {
+            margin-top: 2rem;
             text-align: center;
+
+            legend {
+                font-weight: bold;
+            }
         }
     }
 
     #totpris {
         font-size: 2rem;
-        font-weight: bold;
+        font-weight: 900;
         margin: 0.5rem;
     }
 
@@ -943,12 +945,6 @@ aside {
         margin: 0 auto;
         margin-bottom: 2rem;
         font-size: 1rem;
-    }
-
-    #kjop:hover {
-        opacity: 0.5;
-        text-decoration: underline;
-        color: rgb(255, 255, 39);
     }
 
     .bkrbox {
@@ -1064,14 +1060,6 @@ li {
         width: 50vw;
     }
 
-    #fortogh {
-        font-size: 1rem;
-    }
-
-    #betalingsform {
-        margin-bottom: 1.5rem;
-    }
-
     #banner {
 
         article {
@@ -1080,6 +1068,18 @@ li {
                 display: none; /*https://www.w3schools.com/css/css_display_visibility.asp*/
             }
         }
+    }
+
+    #product_information, #productimages {
+        margin: 0 auto;
+    }
+
+    #fortogh {
+        font-size: 1rem;
+    }
+
+    #betalingsform {
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -1314,6 +1314,7 @@ li {
 
                 background-color: rgb(0, 0, 0);
                 color: rgb(255, 255, 255);
+                text-decoration: underline;
             }
         }
     }
@@ -1329,6 +1330,11 @@ li {
 
         img {
             max-width: 700px;
+        }
+
+        .fa-heart:hover {
+            color: rgb(192, 51, 51);
+            transform: scale(1.5); /*https://www.shecodes.io/athena/3020-how-to-use-hover-to-expand-a-button-in-css*/
         }
     }
     
@@ -1382,10 +1388,6 @@ li {
 
         article {
             padding: 0.1rem;
-
-            img {
-                height: 10rem;
-            }
         }
 
         h2 {
@@ -1407,7 +1409,6 @@ li {
             grid-column-end: 2;
             grid-row-start: 3;
             grid-row-end: 4;
-            max-width: 386px;
         }
     
         #ctg2 {
@@ -1415,31 +1416,35 @@ li {
             grid-column-end: 3;
             grid-row-start: 3;
             grid-row-end: 4;
-            max-width: 386px;
         }
     
         #ctg3 {
             grid-column-start: 3;
             grid-column-end: 4;
             grid-row-start: 3;
-            grid-row-end: 4;
-            max-width: 386px;
+            grid-row-end: 5;
+            
+            img {
+                height: 20rem;
+            }
         }
     
         #ctg4 {
             grid-column-start: 1;
             grid-column-end: 3;
             grid-row-start: 4;
-            grid-row-end: 5;
-            max-width: 864px;
+            grid-row-end: 6;
+
+            img {
+                height: 20rem;
+            }
         }
     
         #ctg5 {
             grid-column-start: 3;
             grid-column-end: 4;
-            grid-row-start: 4;
-            grid-row-end: 5;
-            max-width: 300px;
+            grid-row-start: 5;
+            grid-row-end: 6;
             margin: 0 0 0 auto;
         }
     }
@@ -1459,6 +1464,7 @@ li {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
+        margin-left: 2rem;
 
         #brodnav {
             grid-column-start: 1;
@@ -1573,6 +1579,14 @@ li {
                     }
                 }
             }
+        }
+    }
+
+    #product_flex {
+
+        .fa-heart:hover {
+            color: rgb(192, 51, 51);
+            transform: scale(1.5); /*https://www.shecodes.io/athena/3020-how-to-use-hover-to-expand-a-button-in-css*/
         }
     }
 
@@ -1832,6 +1846,12 @@ li {
             grid-row-start: 5;
             grid-row-end: 6;
         }
+
+        #kjop:hover {
+            opacity: 0.5;
+            text-decoration: underline;
+            color: rgb(255, 255, 39);
+        }
     }
 
     a:hover {
@@ -1857,19 +1877,5 @@ li {
         position: absolute;
         top: 13%;
         left: 0;
-    }
-}
-
-
-
-/*BIG DESKTOP*/
-@media only screen and (min-width: 1150px){
-
-    #popular_categories {
-
-        #ctg5 {
-
-            margin-right: 0.2rem;
-        }
     }
 }
